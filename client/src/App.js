@@ -9,6 +9,7 @@ import Home from './components/Home'
 import SignUp from './components/SignUp';
 import Login from './components/Login';
 import Navbar from './components/Navbar';
+import YourTripHome from './components/LoggedIn/YourTripHome';
 
 const client = new ApolloClient({
   uri: 'http://localhost:3001/graphql',
@@ -33,8 +34,13 @@ function App() {
               path="/sign-up" 
               element={<SignUp />}
           />
+          <Route
+              path='/your-trip'
+              element={<YourTripHome />}
+          />
         </Routes>
       </Router>
+      
     </ApolloProvider>
   );
 }
