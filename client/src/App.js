@@ -1,11 +1,18 @@
 import './App.css';
-// import all of the components here
+import Login from './components/Login';
+
+import { ApolloClient, InMemoryCache, ApolloProvider, HttpLink } from '@apollo/client';
+
+const client = new ApolloClient({
+  uri: 'http://localhost:3001/graphql',
+  cache: new InMemoryCache()
+});
 
 function App() {
   return (
-    <div>
-      Hi, I'm connected!
-    </div>
+    <ApolloProvider client={client}>
+      <Login />
+    </ApolloProvider>
   );
 }
 
