@@ -11,7 +11,11 @@ const userSchema = new Schema({
     password: {
         type: String,
         required: true
-    }
+    },
+    trips: [{
+        type: Schema.Types.ObjectId,
+        ref: Trip
+    }]
 });
 
 const User = model("User", userSchema);
