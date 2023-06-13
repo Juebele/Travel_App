@@ -14,7 +14,7 @@ const userSchema = new Schema({
     },
     trips: [{
         type: Schema.Types.ObjectId,
-        ref: Trip
+        ref: "Trip"
     }]
 });
 
