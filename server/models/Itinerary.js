@@ -27,8 +27,4 @@ const itinerarySchema = new Schema({
 
 const Itinerary = model('Itinerary', itinerarySchema)
 
-
-tripId: [
-    {t}
-]
-{type: Schema.Types.ObjectId, ref: ''}
+module.exports = Itinerary;
