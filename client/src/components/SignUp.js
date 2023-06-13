@@ -59,7 +59,7 @@ function SignUp() {
                 </div>
                 <div>
                     Already have an account? {`\n`}
-                    <Link to={`/login`}>
+                    <Link to={`/`}>
                         Login here!
                     </Link>
                 </div>
