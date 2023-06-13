@@ -8,6 +8,7 @@ import './App.css';
 import Home from './components/Home'
 import SignUp from './components/SignUp';
 import Login from './components/Login';
+import Navbar from './components/Navbar';
 
 const client = new ApolloClient({
   uri: 'http://localhost:3001/graphql',
@@ -18,6 +19,7 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
+        <Navbar />
         <Routes>
           <Route
               path="/" 

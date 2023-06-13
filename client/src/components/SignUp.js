@@ -39,7 +39,10 @@ function SignUp() {
 
     return (
         <div>
-            <form onSubmit={handleFormSubmit}>
+            <form className="login-signup-form row mx-auto col-10 col-md-8 col-lg-6" onSubmit={handleFormSubmit}>
+                <h1 className="formHeader">
+                    Welcome to (name)
+                </h1>
                 <div className="mb-3">
                     <label htmlFor="exampleInputEmail1" className="form-label">Username</label>
                     <input type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" 
@@ -59,11 +62,11 @@ function SignUp() {
                 </div>
                 <div>
                     Already have an account? {`\n`}
-                    <Link to={`/`}>
+                    <Link to={`/login`}>
                         Login here!
                     </Link>
                 </div>
-                <button type="submit" className="btn btn-primary">Sign Up</button>
+                <button id="submit-login-signup" type="submit" className="btn btn-primary">Sign Up</button>
             </form>
         </div>
     )
