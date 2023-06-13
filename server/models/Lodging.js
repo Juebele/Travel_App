@@ -15,9 +15,10 @@ const lodgingSchema = new Schema({
         type: String,
         required: true
     },
-    tripId: [
-        {type: Schema.Types.ObjectId, ref: 'User'}
-    ]
+    tripId: {
+        type: Schema.Types.ObjectId, 
+        ref: 'Trip'
+    }
 });
 
 const Lodging = model('Lodging', lodgingSchema);
