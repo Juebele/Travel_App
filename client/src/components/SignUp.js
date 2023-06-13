@@ -66,7 +66,9 @@ function SignUp() {
                         Login here!
                     </Link>
                 </div>
+                <div className='d-flex justify-content-center'>
                 <button id="submit-login-signup" type="submit" className="btn btn-primary">Sign Up</button>
+                </div>
             </form>
         </div>
     )

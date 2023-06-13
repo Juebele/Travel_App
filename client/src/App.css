@@ -1,5 +1,7 @@
-/* LANDING PAGE STYLING */
-
+/* HOMEPAGE STYLING */
+.homepage {
+    justify-content: center;
+}
 
 /* NAVBAR STYLING */
 #customNav {
