@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Navbar from '../Navbar';
 import Banner from './Banner'
 
 export default function YourTripHome() {
