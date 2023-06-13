@@ -32,10 +32,12 @@ type Itinerary {
 
 type Query {
     viewUsers: [User]
+    viewTrips: [Trip]
 }
 
 type Mutation {
     addUser(username: String!, password: String!): User
+    addTrip(tripName: String!, location: String!, startDate: String!, endDate: String!, lodgingName: String!, lodgingAddress: String!, lodgingContact: String!): Trip
 }
 `;
 
