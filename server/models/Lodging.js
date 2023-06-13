@@ -3,15 +3,15 @@ const mongoose = require('mongoose');
 const { Schema, model } = mongoose;
 
 const lodgingSchema = new Schema({
-    name: {
+    lodgingName: {
         type: String,
         required: true
     },
-    address: {
+    lodgingAddress: {
         type: String,
         required: true
     },
-    contact: {
+    lodgingContact: {
         type: String,
         required: true
     },
