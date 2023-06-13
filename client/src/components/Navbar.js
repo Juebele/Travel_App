@@ -11,7 +11,7 @@ function Navbar() {
                         <ul className="navbar-nav">
                             <li className="nav-item nav-link">
                                 <Link className="customLink" to={`/login`}>
-                                    Login
+                                    Log In
                                 </Link>
                             </li>
                             <li className="nav-item nav-link">

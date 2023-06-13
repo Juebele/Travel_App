@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 function Login() {
 
-    const [ userInfo, setUserInfo ] = useState({
+    const [userInfo, setUserInfo] = useState({
         username: '',
         password: ''
     });
@@ -14,7 +14,7 @@ function Login() {
         console.log(name);
         console.log(value);
         console.log(userInfo);
-        setUserInfo({...userInfo, [name]: value});
+        setUserInfo({ ...userInfo, [name]: value });
     };
 
     // const handleFormSubmit = async (e) => {
@@ -40,28 +40,30 @@ function Login() {
                 </h1>
                 <div className="mb-3">
                     <label htmlFor="exampleInputEmail1" className="form-label">Username</label>
-                    <input type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" 
-                    name="username"
-                    value={userInfo.username}
-                    onChange={handleInputChange}
-                    required />
-                        <div id="emailHelp" className="form-text"></div>
+                    <input type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        name="username"
+                        value={userInfo.username}
+                        onChange={handleInputChange}
+                        required />
+                    <div id="emailHelp" className="form-text"></div>
                 </div>
                 <div className="mb-3">
                     <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
                     <input type="password" className="form-control" id="exampleInputPassword1"
-                    name="password"
-                    value={userInfo.password}
-                    onChange={handleInputChange}
-                    required />
+                        name="password"
+                        value={userInfo.password}
+                        onChange={handleInputChange}
+                        required />
                 </div>
-                    <div>
-                        Don't have an account? {`\n`}
-                        <Link to={`/sign-up`}>
-                            Sign up instead!
-                        </Link>
-                    </div>
-                <button id="submit-login-signup" type="submit" className="btn btn-primary">Login</button>
+                <div>
+                    Don't have an account? {`\n`}
+                    <Link to={`/sign-up`}>
+                        Sign up instead!
+                    </Link>
+                </div>
+                <div className='d-flex justify-content-center'>
+                    <button id="submit-login-signup" type="submit" className="btn btn-primary">Log In</button>
+                </div>
             </form>
         </div>
     )
