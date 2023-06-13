@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "an app to plan travel with friends",
   "main": "index.js",
+  "proxy": "http://localhost:3001/",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "install": "cd server && npm i && cd ../client && npm i",

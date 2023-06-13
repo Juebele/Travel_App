@@ -8,11 +8,10 @@ const resolvers = {
     },
 
     Mutation: {
-        addUser: async (_, args) => {
-            const user = await User.create(args);
-            return user;
+        addUser: async (_, {username, password}) => {
+            return await User.create({username, password});
         }
-    }
+    },
 };
 
 module.exports = resolvers;

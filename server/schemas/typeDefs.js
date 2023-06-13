@@ -12,8 +12,8 @@ type Trip {
     _id: ID
     tripName: String
     location: String
-    startDate: Date
-    endDate: Date
+    startDate: String
+    endDate: String
     owner: User
     lodging: Lodging
     itinerary: Itinerary
@@ -37,12 +37,12 @@ type Itinerary {
 }
 
 type Query {
-    users: [User]
+    viewUsers: [User]
 }
 
 type Mutation {
-    addUser(username: String!, password: String!)
-}`
-;
+    addUser(username: String!, password: String!): User
+}
+`;
 
 module.exports = typeDefs;
