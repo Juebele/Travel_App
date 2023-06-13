@@ -16,11 +16,11 @@ const tripSchema = new Schema({
 
     },
     startDate: {
-        type: Date,
+        type: String,
         required: true,
     },
     endDate: {
-        type: Date,
+        type: String,
         required: true
     },
     owner: {
