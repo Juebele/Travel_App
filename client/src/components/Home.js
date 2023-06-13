@@ -15,6 +15,12 @@ function Home() {
                     Get Started
                 </Link>
             </button>
+            <button className="btn btn-primary">
+                <Link className="customLink" to={`/yourtrip`}>
+                    Your trip
+                </Link>
+            </button>
+
         </div>
     )
 }
