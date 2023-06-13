@@ -34,4 +34,15 @@ type Itinerary {
     time: String
     description: String
     tripId: Trip
+}
+
+type Query {
+    users: [User]
+}
+
+type Mutation {
+    addUser(username: String!, password: String!)
 }`
+;
+
+module.exports = typeDefs;
