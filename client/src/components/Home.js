@@ -10,11 +10,13 @@ function Home() {
             <h2 className='d-flex justify-content-center'>
                 Welcome to (insert official name here). Trip planning made easy.
             </h2>
+            <div className="d-flex justify-content-center">
             <button className="btn btn-primary">
                 <Link id="getStarted" className="customLink" to={`/login`}>
                     Get Started
                 </Link>
             </button>
+            </div>
         </div>
     )
 }
