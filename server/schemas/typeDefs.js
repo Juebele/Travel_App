@@ -15,7 +15,6 @@ type Trip {
     startDate: String
     endDate: String
     owner: User
-    lodging: Lodging
     itinerary: Itinerary
     lodgingName: String
     lodgingAddress: String
