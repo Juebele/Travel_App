@@ -26,10 +26,6 @@ const tripSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'User' 
     },
-    lodging: {
-        type: Schema.Types.ObjectId,
-        ref: 'Lodging'
-    },
     itinerary: {
         type: Schema.Types.ObjectId,
         ref: 'Itinerary'
