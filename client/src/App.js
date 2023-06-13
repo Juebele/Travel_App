@@ -1,5 +1,6 @@
 import './App.css';
 import Login from './components/Login';
+import CreateTripForm from './components/YourTrip/YourTripDetails/CreateTripForm';
 
 import { ApolloClient, InMemoryCache, ApolloProvider, HttpLink } from '@apollo/client';
 
@@ -12,6 +13,7 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Login />
+      <CreateTripForm />
     </ApolloProvider>
   );
 }

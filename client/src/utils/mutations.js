@@ -9,3 +9,16 @@ mutation addUser ($username: String!, $password: String!) {
     }
   }
 `;
+export const ADD_TRIP = gql`
+mutation addTrip($tripName: String!, $location: String!, $startDate: String!, $endDate: String!, $lodgingName: String!, $lodgingAddress: String!, $lodgingContact: String!) {
+  addTrip(tripName: $tripName, location: $location, startDate: $startDate, endDate: $endDate, lodgingName: $lodgingName, lodgingAddress: $lodgingAddress, lodgingContact: $lodgingContact) {
+    tripName
+    location
+    startDate
+    endDate
+    lodgingName
+    lodgingAddress
+    lodgingContact
+  }
+}
+`
