@@ -2,7 +2,6 @@ const mongoose = require('mongoose');
 
 const { Schema, model } = mongoose;
 
-
 const tripSchema = new Schema({
     tripName:{
         type: String,
@@ -34,9 +33,19 @@ const tripSchema = new Schema({
     itinerary: {
         type: Schema.Types.ObjectId,
         ref: 'Itinerary'
+    },
+    lodgingName: {
+        type: String,
+        required: true
+    },
+    lodgingAddress: {
+        type: String,
+        required: true
+    },
+    lodgingContact: {
+        type: String,
+        required: true
     }
-
-
 })
 
 const Trip = model('Trip', tripSchema);

@@ -15,16 +15,10 @@ type Trip {
     startDate: String
     endDate: String
     owner: User
-    lodging: Lodging
     itinerary: Itinerary
-}
-
-type Lodging {
-    _id: ID
-    name: String
-    address: String
-    contact: String
-    tripID: Trip
+    lodgingName: String
+    lodgingAddress: String
+    lodgingContact: String
 }
 
 type Itinerary {
