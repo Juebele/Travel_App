@@ -56,7 +56,7 @@ function Login() {
                     onChange={handleInputChange}
                     required />
                 </div>
-                <button type="submit" className="btn btn-primary">Login</button>
+                <button type="submit" className="btn btn-primary">Sign Up!</button>
             </form>
         </div>
     )
