@@ -1,0 +1,34 @@
+/* LANDING PAGE STYLING */
+
+
+/* NAVBAR STYLING */
+#customNav {
+    margin: 1vb 6vb;
+}
+
+#logo {
+    font-size: x-large;
+    font-weight: 700;
+}
+
+.customLink {
+    text-decoration: none;
+}
+
+#getStarted {
+    color: white;
+}
+
+
+/* SIGN-UP and LOGIN FORM STYLING */
+.login-signup-form {
+    padding-top: 5rem;
+}
+
+.formHeader {
+    text-align: center;
+}
+
+#submit-login-signup {
+    margin-top: 1vb;
+}

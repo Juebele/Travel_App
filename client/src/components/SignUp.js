@@ -2,12 +2,17 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
-function Login() {
+import { useMutation } from '@apollo/client';
+import { ADD_USER } from '../utils/mutations';
+
+function SignUp() {
 
     const [ userInfo, setUserInfo ] = useState({
         username: '',
         password: ''
     });
+
+    const [ addUser, {error} ] = useMutation(ADD_USER);
 
     const handleInputChange = async (e) => {
         const { name, value } = e.target;
@@ -17,26 +22,26 @@ function Login() {
         setUserInfo({...userInfo, [name]: value});
     };
 
-    // const handleFormSubmit = async (e) => {
-    //     e.preventDefault();
-    //     try {
-    //         const { data } = await addUser({
-    //             variables: {
-    //                 ...userInfo
-    //             }
-    //         })
-    //         window.location.reload();
-    //         console.log(data);
-    //     } catch (err) {
-    //         console.log(err);
-    //     }
-    // };
+    const handleFormSubmit = async (e) => {
+        e.preventDefault();
+        try {
+            const { data } = await addUser({
+                variables: {
+                    ...userInfo
+                }
+            })
+            window.location.reload();
+            console.log(data);
+        } catch (err) {
+            console.log(err);
+        }
+    };
 
     return (
         <div>
-            <form className="login-signup-form row mx-auto col-10 col-md-8 col-lg-6">
+            <form className="login-signup-form row mx-auto col-10 col-md-8 col-lg-6" onSubmit={handleFormSubmit}>
                 <h1 className="formHeader">
-                    Welcome back!
+                    Welcome to (name)
                 </h1>
                 <div className="mb-3">
                     <label htmlFor="exampleInputEmail1" className="form-label">Username</label>
@@ -55,16 +60,16 @@ function Login() {
                     onChange={handleInputChange}
                     required />
                 </div>
-                    <div>
-                        Don't have an account? {`\n`}
-                        <Link to={`/sign-up`}>
-                            Sign up instead!
-                        </Link>
-                    </div>
-                <button id="submit-login-signup" type="submit" className="btn btn-primary">Login</button>
+                <div>
+                    Already have an account? {`\n`}
+                    <Link to={`/login`}>
+                        Login here!
+                    </Link>
+                </div>
+                <button id="submit-login-signup" type="submit" className="btn btn-primary">Sign Up</button>
             </form>
         </div>
     )
 }
 
-export default Login;
+export default SignUp;
