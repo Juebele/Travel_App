@@ -25,10 +25,9 @@
   },
   "homepage": "https://github.com/Juebele/Travel_App#readme",
   "dependencies": {
-    "concurrently": "^8.2.0",
-    "nodemon": "^2.0.22"
+    "concurrently": "^8.2.0"
   },
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
+    "nodemon": "^2.0.22"
   }
 }
