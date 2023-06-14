@@ -26,6 +26,7 @@
   "homepage": "https://github.com/Juebele/Travel_App#readme",
   "dependencies": {
     "concurrently": "^8.2.0",
+    "mongodb": "^5.6.0",
     "nodemon": "^2.0.22"
   },
   "devDependencies": {
