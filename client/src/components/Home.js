@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 function Home() {
     return (
-        <div className="homepage container-fluid">
+        <div className="homepage container-fluid row">
             <p className='d-flex justify-content-center'>
                 Do you love to travel, but get overwhelmed by all the planning?
             </p>
@@ -11,15 +11,16 @@ function Home() {
                 Welcome to (insert official name here). Trip planning made easy.
 
             </h2>
-            <div className="d-flex justify-content-center">
+            <div className="d-flex justify-content-center col">
                 <button className="btn btn-primary">
                     <Link id="getStarted" className="customLink" to={`/login`}>
                         Get Started
                     </Link>
                 </button>
                <button className="btn btn-primary">
-                  <Link className="customLink" to={`/your-trip`}>
-                      Your trip
+
+                  <Link id="tripHome" className="customLink" to={`/yourtrip`}>
+                      Your Trip
                    </Link>
             </button>
             </div>  
