@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import CreateTripForm from './CreateTripForm';
 
 export default function YourTripDetails() {
   const [activeTab, setActiveTab] = useState(0);
@@ -48,12 +49,12 @@ export default function YourTripDetails() {
         </button>
       </div>
       <div>
-        {activeTab === 0 && <div>Insert the Create Trip form here</div>}
-        {activeTab === 1 && <div>Insert the Overview here</div>}
-        {activeTab === 2 && <div>Insert Dates here</div>}
-        {activeTab === 3 && <div>Insert Destinations here</div>}
-        {activeTab === 4 && <div>Insert Lodging here</div>}
-        {activeTab === 5 && <div>Insert Itinerary here</div>}
+        {activeTab == 0 && <CreateTripForm />}
+        {activeTab == 1 && <div>Insert the Overview here</div>}
+        {activeTab == 2 && <div>Insert Dates here</div>}
+        {activeTab == 3 && <div>Insert Destinations here</div>}
+        {activeTab == 4 && <div>Insert Lodging here</div>}
+        {activeTab == 5 && <div>Insert Itinerary here</div>}
       </div>
     </div>
   )
