@@ -1,4 +1,5 @@
 import React from 'react';
+import Auth from '../utils/auth'
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
@@ -12,7 +13,7 @@ function SignUp() {
         password: ''
     });
 
-    const [ addUser, {error} ] = useMutation(ADD_USER);
+    const [ addUser, {error, data} ] = useMutation(ADD_USER);
 
     const handleInputChange = async (e) => {
         const { name, value } = e.target;
@@ -31,6 +32,7 @@ function SignUp() {
                 }
             })
             window.location.reload();
+            Auth.login(data.addUser.token)
             console.log(data);
         } catch (err) {
             console.log(err);
