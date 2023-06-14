@@ -18,7 +18,7 @@ function Home() {
                     </Link>
                 </button>
                <button className="btn btn-primary">
-                  <Link className="customLink" to={`/yourtrip`}>
+                  <Link className="customLink" to={`/your-trip`}>
                       Your trip
                    </Link>
             </button>
