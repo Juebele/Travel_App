@@ -81,7 +81,7 @@
 }
 
 #destinations-info button {
-    background-color: #FF8551;
+    background-color: var(--color3);
 }
 
 li {
