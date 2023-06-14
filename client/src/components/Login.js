@@ -18,10 +18,7 @@ function Login() {
         const { name, value } = e.target;
         
         setFormState({...formState, [name]: value});
-        console.log(name);
-        console.log(value);
-        console.log(userInfo);
-        setUserInfo({ ...userInfo, [name]: value });
+   
     };
 
     const loginFormHandler = async (e) => {
