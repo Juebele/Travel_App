@@ -1,21 +1,56 @@
 const { User, Trip, Itinerary } = require('../models');
+const {AuthenticationError} = require('apollo-server-express');
+const { signToken } = require('../utils/auth');
 
 const resolvers = {
     Query: {
-        viewUsers: async () => {
-            return await User.find();
+        user: async (parent,{username}) => {
+            return await User.findOne({username}).populate('trips')
         },
-        viewTrips: async () => {
-            return await Trip.find();
+        users: async () => {
+            return await User.find().populate('trips');
+        },
+        trips: async () => {
+            return await Trip.find().populate(itinerary);
+        },
+        trip: async (parent, {tripid}) => {
+            return await Trip.findOne({_id: tripid}).populate('itinerary')
+        },
+        itinerary: async(parent, {itineraryid}) => {
+            return await Itinerary.findOne({_id: itineraryid})
+
+        },
+        me: async(parent, args, context) => {
+            if(context.User) {
+                return User.findOne({_id: context.User._id})
+            } throw new AuthenticationError('you must be logged in')
         }
     },
 
     Mutation: {
-        addUser: async (_, {username, password}) => {
-            return await User.create({username, password});
+        login: async (parent, {username, password}) => {
+            const user = await User.findOne({username});
+            if(!user) {
+                throw new AuthenticationError('no user found with this username');
+
+            }
+            const token = signToken(user);
+            return {token, user}
+
         },
-        addTrip: async (_, {tripName, location, startDate, endDate, lodgingName, lodgingAddress, lodgingContact}) => {
-            return await Trip.create({tripName, location, startDate, endDate, lodgingName, lodgingAddress, lodgingContact})
+        addUser: async (parent, {username, password}) => {
+            const user =  await User.create({username, password});
+            const token = signToken(user);
+            return {token, user}
+        },
+        addTrip: async (parent, { userid, tripName, location, startDate, endDate, lodgingName, lodgingAddress, lodgingContact}, context) => {
+            const trip = await Trip.create({
+                tripName, location, startDate, endDate, lodgingName, lodgingAddress, lodgingContact
+            })
+            await User.findOneAndUpdate({
+                _id: userid
+            }, {$addToSet: {trips: trip._id}})
+            return trip
         }
     }
     
