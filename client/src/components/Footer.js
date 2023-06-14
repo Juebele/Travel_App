@@ -12,7 +12,9 @@ function Footer() {
                 <p>James</p>
             </div>
             <div className='container-fluid col links'>Site Links</div>
-            <div className='container-fluid col copyright'>Copyright 2023</div>
+            <div className='container-fluid col copyright'>
+                <p className='container-fluid col justify-content-right'>Copyright 2023</p>
+            </div>
         </div>
     )
 }
