@@ -12,6 +12,10 @@
     justify-content: center;
 }
 
+.buttons {
+    background-color: #FF8551;
+}
+
 /* NAVBAR STYLING */
 #customNav {
     margin: 1vb 6vb;
@@ -20,6 +24,10 @@
 /* FOOTER STYLING */
 .footer {
     background-color: var(--color1);
+}
+
+.footer p {
+    margin: .5em;
 }
 
 #logo {
@@ -32,8 +40,13 @@
 }
 
 #getStarted {
-    color: white;
+    color: var(--color1);
 }
+
+#tripHome {
+    color: var(--color1);
+}
+
 
 
 /* SIGN-UP and LOGIN FORM STYLING */
