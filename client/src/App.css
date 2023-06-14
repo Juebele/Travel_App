@@ -19,11 +19,7 @@
 
 /* FOOTER STYLING */
 .footer {
-    background-color: var(--color3);
-}
-
-.footer p {
-    background-color: #FF8551;
+    background-color: var(--color1);
 }
 
 #logo {
