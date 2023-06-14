@@ -9,3 +9,12 @@ query Query {
     }
   }
 `;
+
+export const GET_DATES = gql `
+query Query {
+  viewTrips {
+    endDate
+    startDate
+  }
+}
+`
