@@ -4,7 +4,6 @@ import './App.css';
 import Home from './components/Home';
 import SignUp from './components/SignUp';
 import Login from './components/Login';
-import CreateTripForm from './components/LoggedIn/YourTripDetails/CreateTripForm';
 
 import { ApolloClient, InMemoryCache, ApolloProvider, HttpLink } from '@apollo/client';
 import Navbar from './components/Navbar';
@@ -16,6 +15,7 @@ const client = new ApolloClient({
 });
 
 function App() {
+
   return (
     <ApolloProvider client={client}>
       <Router>
