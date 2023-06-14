@@ -11,6 +11,7 @@ function Navbar() {
 
     return (
         <div>
+
             {Auth.loggedIn() ? (
                 <nav className="navbar navbar-expand-lg bg-body-tertiary">
                 <div id="customNav" className="container-fluid">
@@ -22,6 +23,7 @@ function Navbar() {
             </nav>
             ) : (
             <nav className="navbar navbar-expand-lg bg-body-tertiary">
+
                 <div id="customNav" className="container-fluid">
                     <a id="logo" className="navbar-brand" href="/">Travel App Name</a>
                     <div className="navbar-nav d-flex">
