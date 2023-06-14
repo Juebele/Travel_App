@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Banner from './Banner'
 import YourTripDetails from './YourTripDetails/YourTripDetails';
 
-export default function YourTripHome() {
+export default function YourTripHome(props) {
     return (
         <div> 
             <Banner />

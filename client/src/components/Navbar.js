@@ -1,10 +1,29 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Auth from '../utils/auth'
 
 function Navbar() {
+
+    const loggedOut = (event) => {
+        event.preventDefault();
+        Auth.logout();
+    }
+
     return (
         <div>
-            <nav className="container-fluid navbar navbar-expand-lg bg-body-tertiary">
+
+            {Auth.loggedIn() ? (
+                <nav className="navbar navbar-expand-lg bg-body-tertiary">
+                <div id="customNav" className="container-fluid">
+                    <a id="logo" className="navbar-brand" href="/">Travel App Name</a>
+                    <div className="navbar-nav d-flex">
+                        <button onClick={loggedOut}>Logout</button>
+                    </div>
+                </div>
+            </nav>
+            ) : (
+            <nav className="navbar navbar-expand-lg bg-body-tertiary">
+
                 <div id="customNav" className="container-fluid">
                     <a id="logo" className="navbar-brand" href="/">Travel App Name</a>
                     <div className="navbar-nav d-flex">
@@ -23,6 +42,7 @@ function Navbar() {
                     </div>
                 </div>
             </nav>
+            )}
         </div>
     )
 }
