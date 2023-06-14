@@ -8,6 +8,11 @@
     margin: 1vb 6vb;
 }
 
+/* FOOTER STYLING */
+.footer {
+    background-color: gray;
+}
+
 #logo {
     font-size: x-large;
     font-weight: 700;

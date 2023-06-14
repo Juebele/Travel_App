@@ -5,7 +5,7 @@ import Home from './components/Home';
 import SignUp from './components/SignUp';
 import Login from './components/Login';
 import CreateTripForm from './components/LoggedIn/YourTripDetails/CreateTripForm';
-
+import Footer from './components/Footer'
 import { ApolloClient, InMemoryCache, ApolloProvider, HttpLink } from '@apollo/client';
 import Navbar from './components/Navbar';
 
@@ -38,6 +38,7 @@ function App() {
           />
         </Routes>
       </Router>
+      <Footer />
     </ApolloProvider>
   );
 }
