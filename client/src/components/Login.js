@@ -7,7 +7,7 @@ import Auth from '../utils/auth';
 
 function Login() {
 
-    const [ formState, setFormState ] = useState({
+    const [formState, setFormState] = useState({
         username: '',
         password: ''
     });
@@ -18,6 +18,10 @@ function Login() {
         const { name, value } = e.target;
         
         setFormState({...formState, [name]: value});
+        console.log(name);
+        console.log(value);
+        console.log(userInfo);
+        setUserInfo({ ...userInfo, [name]: value });
     };
 
     const loginFormHandler = async (e) => {
@@ -49,28 +53,30 @@ function Login() {
                 </h1>
                 <div className="mb-3">
                     <label htmlFor="exampleInputEmail1" className="form-label">Username</label>
-                    <input type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" 
-                    name="username"
-                    value={formState.username}
-                    onChange={handleInputChange}
-                    required />
-                        <div id="emailHelp" className="form-text"></div>
+                    <input type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        name="username"
+                        value={formState.username}
+                        onChange={handleInputChange}
+                        required />
+                    <div id="emailHelp" className="form-text"></div>
                 </div>
                 <div className="mb-3">
                     <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
                     <input type="password" className="form-control" id="exampleInputPassword1"
-                    name="password"
-                    value={formState.password}
-                    onChange={handleInputChange}
-                    required />
+                        name="password"
+                        value={formState.password}
+                        onChange={handleInputChange}
+                        required />
                 </div>
-                    <div>
-                        Don't have an account? {`\n`}
-                        <Link to={`/sign-up`}>
-                            Sign up instead!
-                        </Link>
-                    </div>
-                <button id="submit-login-signup" type="submit" className="btn btn-primary">Login</button>
+                <div>
+                    Don't have an account? {`\n`}
+                    <Link to={`/sign-up`}>
+                        Sign up instead!
+                    </Link>
+                </div>
+                <div className='d-flex justify-content-center'>
+                    <button id="submit-login-signup" type="submit" className="btn btn-primary">Log In</button>
+                </div>
             </form>
         </div>
     )
