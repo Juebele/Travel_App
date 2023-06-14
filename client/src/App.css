@@ -1,3 +1,12 @@
+/* UNIVERSAL STYLING */
+* {
+    --color1: whitesmoke;
+    --color2: #FAF0E4;
+    --color3: #9BCDD2;
+    --color4: #FF8551;
+    --color5: #FFDEDE;
+}
+
 /* HOMEPAGE STYLING */
 .homepage {
     justify-content: center;
@@ -10,7 +19,11 @@
 
 /* FOOTER STYLING */
 .footer {
-    background-color: gray;
+    background-color: var(--color3);
+}
+
+.footer p {
+    background-color: #FF8551;
 }
 
 #logo {
