@@ -1,36 +1,45 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import {LOGIN_USER} from '../utils/mutations';
+import { useMutation } from '@apollo/client';
+import Auth from '../utils/auth';
 
 function Login() {
 
-    const [ userInfo, setUserInfo ] = useState({
+    const [ formState, setFormState ] = useState({
         username: '',
         password: ''
     });
 
+    const [login, { error, data }] = useMutation(LOGIN_USER);
+
     const handleInputChange = async (e) => {
         const { name, value } = e.target;
-        console.log(name);
-        console.log(value);
-        console.log(userInfo);
-        setUserInfo({...userInfo, [name]: value});
+        
+        setFormState({...formState, [name]: value});
     };
 
-    // const handleFormSubmit = async (e) => {
-    //     e.preventDefault();
-    //     try {
-    //         const { data } = await addUser({
-    //             variables: {
-    //                 ...userInfo
-    //             }
-    //         })
-    //         window.location.reload();
-    //         console.log(data);
-    //     } catch (err) {
-    //         console.log(err);
-    //     }
-    // };
+    const loginFormHandler = async (e) => {
+        e.preventDefault();
+        try {
+            const {data} = await login({
+                variables: {...formState}
+            })
+            Auth.login(data.login.token);
+            console.log(data);
+            
+
+        } catch (error) {
+            console.log(error)    
+        }
+        setFormState({
+            username: '',
+            password: ''
+        })
+
+    }
+  
 
     return (
         <div>
@@ -42,7 +51,7 @@ function Login() {
                     <label htmlFor="exampleInputEmail1" className="form-label">Username</label>
                     <input type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" 
                     name="username"
-                    value={userInfo.username}
+                    value={formState.username}
                     onChange={handleInputChange}
                     required />
                         <div id="emailHelp" className="form-text"></div>
@@ -51,7 +60,7 @@ function Login() {
                     <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
                     <input type="password" className="form-control" id="exampleInputPassword1"
                     name="password"
-                    value={userInfo.password}
+                    value={formState.password}
                     onChange={handleInputChange}
                     required />
                 </div>
