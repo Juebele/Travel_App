@@ -8,6 +8,7 @@ import CreateTripForm from './components/LoggedIn/YourTripDetails/CreateTripForm
 
 import { ApolloClient, InMemoryCache, ApolloProvider, HttpLink } from '@apollo/client';
 import Navbar from './components/Navbar';
+import YourTripHome from './components/LoggedIn/YourTripHome';
 
 const client = new ApolloClient({
   uri: 'http://localhost:3001/graphql',
@@ -32,9 +33,9 @@ function App() {
               path="/sign-up" 
               element={<SignUp />}
           />
-             <Route
-              path="/yourtrip" 
-              element={<CreateTripForm />}
+          <Route
+              path='/your-trip'
+              element={<YourTripHome />}
           />
         </Routes>
       </Router>
