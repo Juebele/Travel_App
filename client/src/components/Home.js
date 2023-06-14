@@ -18,8 +18,9 @@ function Home() {
                     </Link>
                 </button>
                <button className="btn btn-primary">
+
                   <Link id="tripHome" className="customLink" to={`/yourtrip`}>
-                      Your trip
+                      Your Trip
                    </Link>
             </button>
             </div>  
