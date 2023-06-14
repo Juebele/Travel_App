@@ -71,12 +71,17 @@
 }
 
 #destinations-info {
+    margin: 1em;
     padding: 1em;
 }
 
-#destinations-info ul {
-    background-color: var(--color2);
+#destinations-info {
+    background-color: var(--color1);
     border-radius: 1em;
+}
+
+#destinations-info button {
+    background-color: #FF8551;
 }
 
 li {

@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { ADD_TRIP } from '../../../utils/mutations';
 
+//Need to import location and description from the database instead of hardcoding them in
+
 const image = require('../../../Assets/imgs/aspen.jpg')
 
 function Destinations() {
@@ -18,11 +20,14 @@ function Destinations() {
                 <img src={image} style={{ maxWidth: '100%' }}/>
                 </div>
             </div>
-            <div className='container-fluid col-8' id='destinations-info'>
+            <div className='container-fluid col-7' id='destinations-info'>
                 <ul>
                     <li>Location: {location}</li>
                     <li>Description: {description}</li>
                 </ul>
+                <div className='text-center'>
+                <button className='btn btn-auto d-inline-block align-content-center'>Change Destination Details</button>
+                </div>
             </div>
         </div>
     )
