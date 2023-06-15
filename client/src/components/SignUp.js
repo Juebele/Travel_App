@@ -72,7 +72,7 @@ function SignUp() {
                     </Link>
                 </div>
                 <div className='d-flex justify-content-center'>
-                <button id="submit-login-signup" type="submit" className="btn btn-primary">Sign Up</button>
+                    <button id="submit-login-signup" type="submit" className="btn btn-primary mb-5">Sign Up</button>
                 </div>
             </form>
         </div>
