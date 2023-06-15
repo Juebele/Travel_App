@@ -46,7 +46,7 @@ function SignUp() {
             <Navbar />
             <form className="login-signup-form row mx-auto col-10 col-md-8 col-lg-6" onSubmit={handleFormSubmit}>
                 <h1 className="formHeader">
-                    Welcome to Bon Voyage!
+                    Sign up for your next adventure!
                 </h1>
                 <div className="mb-3">
                     <label htmlFor="exampleInputEmail1" className="form-label">Username</label>

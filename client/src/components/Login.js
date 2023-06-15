@@ -52,7 +52,7 @@ function Login() {
                 <div>
                     <form onSubmit={loginFormHandler} className="login-signup-form row mx-auto col-10 col-md-8 col-lg-6">
                         <h1 className="formHeader">
-                            Welcome back!
+                            Welcome to Bon Voyage!
                         </h1>
                         <div className="mb-3">
                             <label htmlFor="exampleInputEmail1" className="form-label">Username</label>
