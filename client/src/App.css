@@ -99,3 +99,29 @@
 #submit-login-signup {
     margin-top: 1vb;
 }
+
+#image-row {
+    padding: 1em;
+}
+
+#image-row img {
+    border-radius: 1em;
+}
+
+#destinations-info {
+    margin: 1em;
+    padding: 1em;
+}
+
+#destinations-info {
+    background-color: var(--color1);
+    border-radius: 1em;
+}
+
+#destinations-info button {
+    background-color: var(--color3);
+}
+
+li {
+    list-style-type: none;
+}

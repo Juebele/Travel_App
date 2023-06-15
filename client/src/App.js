@@ -8,6 +8,13 @@ import SignUp from './components/SignUp';
 import Login from './components/Login';
 import YourTripDashboard from './components/LoggedIn/YourTripDashboard';
 
+import CreateTripForm from './components/LoggedIn/YourTripDetails/CreateTripForm';
+import Footer from './components/Footer'
+
+import { ApolloClient, InMemoryCache, ApolloProvider, HttpLink } from '@apollo/client';
+import Navbar from './components/Navbar';
+
+
 const client = new ApolloClient({
   uri: 'http://localhost:3001/graphql',
   cache: new InMemoryCache()
@@ -20,16 +27,16 @@ function App() {
       <Router>
         <Routes>
           <Route
-              path="/" 
-              element={<Home />}
+            path="/"
+            element={<Home />}
           />
           <Route
-              path="/login" 
-              element={<Login />}
+            path="/login"
+            element={<Login />}
           />
           <Route
-              path="/sign-up" 
-              element={<SignUp />}
+            path="/sign-up"
+            element={<SignUp />}
           />
           <Route
               path='/your-trips'
