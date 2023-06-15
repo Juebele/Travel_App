@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import CreateTripForm from './CreateTripForm';
+import Destinations from './Destinations';
 
 export default function YourTripDetails() {
   const [activeTab, setActiveTab] = useState(0);
@@ -31,13 +32,13 @@ export default function YourTripDetails() {
             <button onClick={() => handleTabClick(2)} className={activeTab === 2 ? 'active' : ''}>
                 Dates
             </button>
-            <button onClick={() => handleTabClick(3)} className={activeTab === 0 ? 'active' : ''}>
+            <button onClick={() => handleTabClick(3)} className={activeTab === 3 ? 'active' : ''}>
                 Destinations
             </button>
-            <button onClick={() => handleTabClick(4)} className={activeTab === 0 ? 'active' : ''}>
+            <button onClick={() => handleTabClick(4)} className={activeTab === 4 ? 'active' : ''}>
                 Lodging
             </button>
-            <button onClick={() => handleTabClick(5)} className={activeTab === 0 ? 'active' : ''}>
+            <button onClick={() => handleTabClick(5)} className={activeTab === 5 ? 'active' : ''}>
                 Itinerary
             </button>
         </div>
@@ -45,7 +46,7 @@ export default function YourTripDetails() {
             {activeTab === 0 && <CreateTripForm />}
             {activeTab === 1 && <div>Insert the Overview here</div>}
             {activeTab === 2 && <div>Insert Dates here</div>}
-            {activeTab === 3 && <div>Insert Destinations here</div>}
+            {activeTab === 3 && <Destinations />}
             {activeTab === 4 && <div>Insert Lodging here</div>}
             {activeTab === 5 && <div>Insert Itinerary here</div>}
         </div>
