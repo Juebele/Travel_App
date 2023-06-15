@@ -44,8 +44,9 @@ function CreateTripForm() {
         }
     };
 
-    return (
-        <div>
+return (
+    <div className='row justify-content-center'>
+    <div className="col-md-6 mb-4">
         <form onSubmit={handleFormSubmit}>
             <div className="mb-3">
                 <label htmlFor="tripName" className="form-label">Trip Name</label>
@@ -106,6 +107,7 @@ function CreateTripForm() {
             </div>
             <button type="submit" className="btn btn-primary">Create Trip</button>
         </form>
+    </div>
     </div>
     )
 

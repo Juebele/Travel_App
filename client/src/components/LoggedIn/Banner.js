@@ -3,9 +3,9 @@ const image = require('../../Assets/imgs/banner.jpg');
 
 export default function Banner() {
     return(
-        <div>
-            <div className="row">
-                <img src={image}/>
+        <div className='row col'>
+            <div className="">
+                <img src={image} className='w-100' style={{ height: '350px', objectFit: 'cover' }} alt='Banner'/>
             </div>
         </div>
     )

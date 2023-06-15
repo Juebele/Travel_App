@@ -13,34 +13,34 @@ export default function YourTripDetails() {
 
   return (
     <div>
-        <div>
+        <h2 className="d-flex justify-content-center my-4 fw-bold">
             Your Trip
-        </div>
-        <div>
+        </h2>
+        <div className="d-flex justify-content-center">
             Trip planner: Insert username here
         </div>
-        <div>
+        <div className="d-flex justify-content-center my-3">
             <button className="btn btn-primary">
-                Invite
+                Invite +
             </button>
         </div>
         <div className="d-flex justify-content-center mb-4">
-            <button onClick={() => handleTabClick(0)} className={`btn ${activeTab === 0 ? 'btn-primary' : 'btn-light'}`}>
+            <button onClick={() => handleTabClick(0)} className={`btn ${activeTab === 0 ? 'btn-primary' : 'btn-light'} fw-bold fs-5 mt-2`}>
                 Create Trip
             </button>
-            <button onClick={() => handleTabClick(1)} className={`btn ${activeTab === 1 ? 'btn-primary' : 'btn-light'}`}>
+            <button onClick={() => handleTabClick(1)} className={`btn ${activeTab === 1 ? 'btn-primary' : 'btn-light'} fw-bold fs-5 mt-2`}>
                 Overview
             </button>
-            <button onClick={() => handleTabClick(2)} className={`btn ${activeTab === 2 ? 'btn-primary' : 'btn-light'}`}>
+            <button onClick={() => handleTabClick(2)} className={`btn ${activeTab === 2 ? 'btn-primary' : 'btn-light'} fw-bold fs-5 mt-2`}>
                 Dates
             </button>
-            <button onClick={() => handleTabClick(3)} className={`btn ${activeTab === 3 ? 'btn-primary' : 'btn-light'}`}>
+            <button onClick={() => handleTabClick(3)} className={`btn ${activeTab === 3 ? 'btn-primary' : 'btn-light'} fw-bold fs-5 mt-2`}>
                 Destinations
             </button>
-            <button onClick={() => handleTabClick(4)} className={`btn ${activeTab === 4 ? 'btn-primary' : 'btn-light'}`}>
+            <button onClick={() => handleTabClick(4)} className={`btn ${activeTab === 4 ? 'btn-primary' : 'btn-light'} fw-bold fs-5 mt-2`}>
                 Lodging
             </button>
-            <button onClick={() => handleTabClick(5)} className={`btn ${activeTab === 5 ? 'btn-primary' : 'btn-light'}`}>
+            <button onClick={() => handleTabClick(5)} className={`btn ${activeTab === 5 ? 'btn-primary' : 'btn-light'} fw-bold fs-5 mt-2`}>
                 Itinerary
             </button>
         </div>
