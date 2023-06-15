@@ -23,10 +23,26 @@ export default function Dates() {
             ) : !trips.length ? (
                 <div>Dates haven't been set yet</div>
             ) : (
-                <div>
-                    <p>Start Date: {trip.startDate}</p>
-                    <p>End Date: {trip.endDate}</p>
-                    <p>Number of Days: {calculateDays(trip.startDate, trip.endDate)}</p>
+                <div className="card mx-auto mb-4" style={{ maxWidth: '400px' }}>
+                    <div className="card-body">
+                        <h5 className="card-title text-center">Trip Duration</h5>
+                        <div className="row">
+                        <div className="col-6">
+                            <p className="fw-bold mb-1">Start Date:</p>
+                            <p>{trip.startDate}</p>
+                        </div>
+                        <div className="col-6">
+                            <p className="fw-bold mb-1">End Date:</p>
+                            <p>{trip.endDate}</p>
+                        </div>
+                        </div>
+                        <div className="row">
+                        <div className="col">
+                            <p className="fw-bold mb-1">Number of Days:</p>
+                            <p>{calculateDays(trip.startDate, trip.endDate)}</p>
+                        </div>
+                        </div>
+                    </div>
                 </div>
             )}
         </div>
