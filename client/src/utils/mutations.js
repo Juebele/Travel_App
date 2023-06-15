@@ -27,9 +27,19 @@ mutation addTrip ($userid: ID, $tripName: String!, $location: String!, $startDat
 }
 `;
 
-// export const EDIT_TRIP = gql`
-
-// `;
+export const EDIT_TRIP = gql`
+mutation editTrip($tripName: String, $id: ID!) {
+  editTrip(tripName: $tripName, _id: $id) {
+    tripName
+    location
+    startDate
+    endDate
+    lodgingName
+    lodgingAddress
+    lodgingContact
+  }
+}
+`;
 
 export const LOGIN_USER = gql`
 mutation Login($username: String!, $password: String!) {

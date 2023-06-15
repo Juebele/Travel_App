@@ -52,10 +52,11 @@ const resolvers = {
             }, {$addToSet: {trips: trip._id}})
             return trip;
         },
-        editTrip: async (parent, {tripid, tripName, location, startDate, endDate, lodgingName, lodgingAddress, lodgingContact }) => {
-            const revisedTrip = await Trip.findOneAndUpdate({
-                _id: tripid
-            }, {})
+        editTrip: async (parent, args, context) => {
+            const revisedTrip = await Trip.findOneAndUpdate({ _id: args._id }, args, {
+                new: true
+            });
+            return revisedTrip;
         }
     }
     
