@@ -4,7 +4,7 @@ import Banner from './Banner'
 import YourTripDetails from './YourTripDetails/YourTripDetails';
 import Navbar from '../Navbar'
 
-export default function YourTripHome(props) {
+export default function YourTripDashboard(props) {
     return (
         <div> 
             <Navbar />

@@ -6,7 +6,7 @@ import { useMutation } from '@apollo/client';
 import Auth from '../utils/auth';
 import Home from './Home';
 import Navbar from './Navbar'
-import YourTripHome from './LoggedIn/YourTripHome';
+import YourTripDashboard from './LoggedIn/YourTripDashboard';
 
 function Login() {
 
@@ -82,7 +82,7 @@ function Login() {
                 </form>
                 </div>
             ) : (
-                <YourTripHome />
+                <YourTripDashboard />
             )}
         </div>
     )

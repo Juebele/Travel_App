@@ -6,7 +6,7 @@ import Footer from './components/Footer'
 import Home from './components/Home';
 import SignUp from './components/SignUp';
 import Login from './components/Login';
-import YourTripHome from './components/LoggedIn/YourTripHome';
+import YourTripDashboard from './components/LoggedIn/YourTripDashboard';
 
 const client = new ApolloClient({
   uri: 'http://localhost:3001/graphql',
@@ -33,7 +33,7 @@ function App() {
           />
           <Route
               path='/your-trips'
-              element={<YourTripHome />}
+              element={<YourTripDashboard />}
           />
         </Routes>
       </Router>
