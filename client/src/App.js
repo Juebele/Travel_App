@@ -5,8 +5,6 @@ import Home from './components/Home';
 import SignUp from './components/SignUp';
 import Login from './components/Login';
 
-
-
 import CreateTripForm from './components/LoggedIn/YourTripDetails/CreateTripForm';
 import Footer from './components/Footer'
 
@@ -27,20 +25,20 @@ function App() {
         <Navbar />
         <Routes>
           <Route
-              path="/" 
-              element={<Home />}
+            path="/"
+            element={<Home />}
           />
           <Route
-              path="/login" 
-              element={<Login />}
+            path="/login"
+            element={<Login />}
           />
           <Route
-              path="/sign-up" 
-              element={<SignUp />}
+            path="/sign-up"
+            element={<SignUp />}
           />
           <Route
-              path='/your-trip'
-              element={<YourTripHome />}
+            path='/your-trip'
+            element={<YourTripHome />}
           />
         </Routes>
       </Router>

@@ -3,7 +3,7 @@ import Auth from '../utils/auth';
 // import { Link } from 'react-router-dom';
 
 const Home = () => {
-    return(
+    return (
   <div>Home</div>
     // <form className="login-signup-form row mx-auto col-10 col-md-8 col-lg-6">
     //     <h1 className="formHeader">
@@ -36,9 +36,7 @@ const Home = () => {
     //         <button id="submit-login-signup" type="submit" className="btn btn-primary">Log In</button>
     //     </div>
     // </form>
-
-
     )
-}  
+}
 
 export default Home;
