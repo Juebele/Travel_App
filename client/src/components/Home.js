@@ -30,7 +30,7 @@ const Home = () => {
         <div>
           <Navbar />
           <h3 className='d-flex justify-content-center my-4'>Your Trips</h3>
-            <div className="row">
+            <div className="row justify-content-center">
               <div className="card text-center mb-3 col-3">
                   <div className="card-body">
                     <h5 className="card-title">Trip Titles</h5>
@@ -49,6 +49,7 @@ const Home = () => {
                     <button href="#" className="btn btn-primary">Go somewhere</button>
                   </div>
                 </div>
+                
             </div>
             <div>
                 <h3 className='d-flex justify-content-center'>Create a new trip</h3>
