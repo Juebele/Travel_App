@@ -29,7 +29,7 @@ const Home = () => {
       ) : (
         <div>
           <Navbar />
-          <div>Your Trips</div>
+          <h3 className='d-flex justify-content-center my-4'>Your Trips</h3>
             <div className="row">
               <div className="card text-center mb-3 col-3">
                   <div className="card-body">
@@ -50,7 +50,10 @@ const Home = () => {
                   </div>
                 </div>
             </div>
+            <div>
+                <h3 className='d-flex justify-content-center'>Create a new trip</h3>
                 <CreateTripForm />
+            </div>
           </div>
       )}
 
