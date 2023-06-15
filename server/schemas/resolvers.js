@@ -50,7 +50,7 @@ const resolvers = {
             await User.findOneAndUpdate({
                 _id: userid
             }, {$addToSet: {trips: trip._id}})
-            return trip
+            return trip;
         }
     }
     
