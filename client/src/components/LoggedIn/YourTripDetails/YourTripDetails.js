@@ -45,7 +45,7 @@ export default function YourTripDetails() {
         <div>
             {activeTab === 0 && <CreateTripForm />}
             {activeTab === 1 && <div>Insert the Overview here</div>}
-            {activeTab === 2 && <div>Insert Dates here</div>}
+            {activeTab === 2 && <Dates />}
             {activeTab === 3 && <div>Insert Destinations here</div>}
             {activeTab === 4 && <div>Insert Lodging here</div>}
             {activeTab === 5 && <div>Insert Itinerary here</div>}

@@ -1,30 +1,25 @@
 import React, { useEffect, useState } from 'react';
 import { useQuery } from '@apollo/client';
+import { GET_DATES } from '../../../utils/queries';
 
 export default function Dates() {
-    const { error, data } = useQuery(GET_DATES);
-
-    const getDateData = async () => {
-        try {
-            const res = await fetch('http://localhost:3001/graphql');
-            const incomingData = await res.json();
-            setData(incomingData);
-            console.log(incomingData)
-        } catch (err) {
-            console.log(err);
-        }
-    }
-
-    getDateData();
+    const { loading, data } = useQuery(GET_DATES);
+    const trips = data?.trips || [];
+    // The number in the following array will need to be changed based on which trip the user chooses to see from the home page
+    const trip = trips[0];
 
     return (
         <div>
-            {data.map((item, index) => (
-                <div key={index}>
-                <h2>{item.title}</h2>
-                <p>{item.description}</p>
+            {loading ? (
+                <div>Loading...</div>
+            ) : !trips.length ? (
+                <div>Dates haven't been set yet</div>
+            ) : (
+                <div>
+                <p>Start Date: {trip.startDate}</p>
+                <p>End Date: {trip.endDate}</p>
                 </div>
-            ))}
+            )}
         </div>
-    )
+    );
 }

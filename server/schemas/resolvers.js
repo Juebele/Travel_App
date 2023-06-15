@@ -11,7 +11,7 @@ const resolvers = {
             return await User.find().populate('trips');
         },
         trips: async () => {
-            return await Trip.find().populate(itinerary);
+            return await Trip.find().populate('itinerary');
         },
         trip: async (parent, {tripid}) => {
             return await Trip.findOne({_id: tripid}).populate('itinerary')
