@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import CreateTripForm from './CreateTripForm';
-import Dates from './Dates';
+import Lodging from './Lodging';
 
 export default function YourTripDetails() {
   const [activeTab, setActiveTab] = useState(0);
@@ -45,9 +45,9 @@ export default function YourTripDetails() {
         <div>
             {activeTab === 0 && <CreateTripForm />}
             {activeTab === 1 && <div>Insert the Overview here</div>}
-            {activeTab === 2 && <Dates />}
+            {activeTab === 2 && <div>Insert Dates here</div>}
             {activeTab === 3 && <div>Insert Destinations here</div>}
-            {activeTab === 4 && <div>Insert Lodging here</div>}
+            {activeTab === 4 && <Lodging />}
             {activeTab === 5 && <div>Insert Itinerary here</div>}
         </div>
     </div>
