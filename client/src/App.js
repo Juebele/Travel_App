@@ -32,7 +32,7 @@ function App() {
               element={<SignUp />}
           />
           <Route
-              path='/your-trip'
+              path='/your-trips'
               element={<YourTripHome />}
           />
         </Routes>

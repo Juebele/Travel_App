@@ -10,14 +10,19 @@ function Navbar() {
         Auth.logout();
     }
 
+    const renderTrips = (event) => {
+        event.preventDefault();
+        window.location.assign('/your-trips');
+    }
+
     return (
         <div>
-
             {Auth.loggedIn() ? (
                 <nav className="navbar navbar-expand-lg bg-body-tertiary">
                 <div id="customNav" className="container-fluid">
                     <a className="navbar-brand" href="/"><img id="logo" src={Logo} alt="Bon Voyage logo"/></a>
                     <div className="navbar-nav d-flex">
+                        {/* <button className="btn btn-light" onClick={renderTrips}>Your Trips</button> */}
                         <button className="btn btn-light" onClick={loggedOut}>Logout</button>
                     </div>
                 </div>
