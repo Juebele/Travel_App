@@ -4,8 +4,14 @@ import '../App.css'
 import Navbar from './Navbar';
 import Auth from '../utils/auth';
 import CreateTripForm from './LoggedIn/YourTripDetails/CreateTripForm';
+import { useQuery } from '@apollo/client';
+import { QUERY_ME } from '../utils/queries';
 
 const Home = () => {
+
+  const { loading, data } = useQuery(QUERY_ME);
+  console.log(data);
+
   return (
     <div>
       {!Auth.loggedIn() ? (
@@ -30,27 +36,21 @@ const Home = () => {
         <div>
           <Navbar />
           <div>Your Trips</div>
-            <div className="row">
+          {data ? data.me.trips.map((trip) => {
+            return (
               <div className="card text-center mb-3 col-3">
-                  <div className="card-body">
-                    <h5 className="card-title">Trip Titles</h5>
-                    <button href="#" className="btn btn-primary">Go somewhere</button>
-                  </div>
+                <div className="card-body">
+                  <h5 className="card-title">{trip.tripName}</h5>
+                  <button className="btn btn-primary">
+                    <Link to={`/trips/${trip._id}`}>
+                      View Trip
+                    </Link>
+                  </button>
                 </div>
-                <div className="card text-center mb-3 col-3">
-                  <div className="card-body">
-                    <h5 className="card-title">Trip Titles</h5>
-                    <button href="#" className="btn btn-primary">Go somewhere</button>
-                  </div>
-                </div>
-                <div className="card text-center mb-3 col-3">
-                  <div className="card-body">
-                    <h5 className="card-title">Trip Titles</h5>
-                    <button href="#" className="btn btn-primary">Go somewhere</button>
-                  </div>
-                </div>
-            </div>
-                <CreateTripForm />
+              </div>
+            )
+          }) : null }
+            <CreateTripForm />
           </div>
       )}
 
