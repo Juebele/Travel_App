@@ -44,7 +44,7 @@ export default function Dates() {
                             <button onClick={() => {
                                 editTrip({variables: {
                                     startDate: startDate, 
-                                    id: 
+                                    id: window.location.pathname.split('/').pop()
                                 }})
                             }}>Save</button>
                         </div>

@@ -21,8 +21,8 @@ const resolvers = {
 
         },
         me: async(parent, args, context) => {
-            if(context.User) {
-                return User.findOne({_id: context.User._id})
+            if(context.user) {
+                return User.findOne({_id: context.user._id}).populate('trips');
             } throw new AuthenticationError('you must be logged in')
         }
     },
@@ -32,11 +32,9 @@ const resolvers = {
             const user = await User.findOne({username});
             if(!user) {
                 throw new AuthenticationError('no user found with this username');
-
             }
             const token = signToken(user);
             return {token, user}
-
         },
         addUser: async (parent, {username, password}) => {
             const user =  await User.create({username, password});
