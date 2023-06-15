@@ -8,6 +8,7 @@ import { useQuery } from '@apollo/client';
 import { QUERY_ME } from '../utils/queries';
 
 const Home = () => {
+  const textColor= '#950952';
 
   const { loading, data } = useQuery(QUERY_ME);
   console.log(data);
@@ -18,12 +19,17 @@ const Home = () => {
         <div id="homepage">
           <Navbar />
           <div id="homepage-bg">
-            <div id="another-home-el" className="container-fluid">
-              <div className="homepage-el col-6">
-                <h1>
-                  Welcome to Bon Voyage! Trip planning made easy.
+            <div id="another-home-el" className="container-fluid ">
+              <div className="homepage-el">
+                <h1 style={{color: textColor}} className=''>
+                  Welcome to Bon Voyage! 
                 </h1>
-                <button id="getStartedBtn" className="btn btn-primary">
+                <div style={{marginBottom: '50px'}}>
+                  <h2 style={{color: textColor, fontSize: '50px', fontWeight: 'bold', }} className=''>
+                    Trip planning made easy.
+                  </h2>
+                </div>
+                <button id="getStartedBtn" className="btn btn-primary" style={{ backgroundColor: textColor, border: 'none' }}>
                   <Link id="getStartedLink" className="customLink" to={`/sign-up`}>
                     Get Started
                   </Link>

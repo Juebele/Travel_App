@@ -52,7 +52,7 @@ function Login() {
                 <div>
                     <form onSubmit={loginFormHandler} className="login-signup-form row mx-auto col-10 col-md-8 col-lg-6">
                         <h1 className="formHeader">
-                            Welcome back!
+                            Welcome to Bon Voyage!
                         </h1>
                         <div className="mb-3">
                             <label htmlFor="exampleInputEmail1" className="form-label">Username</label>
@@ -77,7 +77,7 @@ function Login() {
                                 Sign up instead!
                             </Link>
                         </div>
-                        <div className='d-flex justify-content-center'>
+                        <div className='d-flex justify-content-center mb-5'>
                             <button id="submit-login-signup" type="submit" className="btn btn-primary">Log In</button>
                         </div>
                     </form>
