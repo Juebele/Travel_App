@@ -32,13 +32,13 @@ export default function YourTripDetails() {
             <button onClick={() => handleTabClick(2)} className={activeTab === 2 ? 'active' : ''}>
                 Dates
             </button>
-            <button onClick={() => handleTabClick(3)} className={activeTab === 0 ? 'active' : ''}>
+            <button onClick={() => handleTabClick(3)} className={activeTab === 3 ? 'active' : ''}>
                 Destinations
             </button>
-            <button onClick={() => handleTabClick(4)} className={activeTab === 0 ? 'active' : ''}>
+            <button onClick={() => handleTabClick(4)} className={activeTab === 4 ? 'active' : ''}>
                 Lodging
             </button>
-            <button onClick={() => handleTabClick(5)} className={activeTab === 0 ? 'active' : ''}>
+            <button onClick={() => handleTabClick(5)} className={activeTab === 5 ? 'active' : ''}>
                 Itinerary
             </button>
         </div>

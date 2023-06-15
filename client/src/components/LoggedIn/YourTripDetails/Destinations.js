@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import CreateTripForm from './CreateTripForm';
 import { Link } from 'react-router-dom';
 
 import { useMutation } from '@apollo/client';
@@ -17,7 +18,7 @@ function Destinations() {
         <div className='container-fluid row'>
             <div className='container-fluid col-sm-4' id='aspen-image'>
                 <div className='container-fluid col-sm' id='image-row'>
-                <img src={image} style={{ maxWidth: '100%' }}/>
+                    <img src={image} style={{ maxWidth: '100%' }} />
                 </div>
             </div>
             <div className='container-fluid col-7' id='destinations-info'>
@@ -26,7 +27,8 @@ function Destinations() {
                     <li>Description: {description}</li>
                 </ul>
                 <div className='text-center'>
-                <button className='btn btn-auto d-inline-block align-content-center'>Change Destination Details</button>
+                    {/* <button className='btn btn-auto d-inline-block align-content-center'>Change Destination Details</button> */}
+                    <Link to={'/your-trip'}>test</Link>
                 </div>
             </div>
         </div>
