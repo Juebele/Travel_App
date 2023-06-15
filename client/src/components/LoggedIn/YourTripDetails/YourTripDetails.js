@@ -22,7 +22,7 @@ export default function YourTripDetails() {
                 Invite
             </button>
         </div>
-        <div>
+        <div className="d-flex justify-content-center mb-4">
             <button onClick={() => handleTabClick(0)} className={`btn ${activeTab === 0 ? 'btn-primary' : 'btn-light'}`}>
                 Create Trip
             </button>
