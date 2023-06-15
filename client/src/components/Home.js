@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import '../App.css'
 import Navbar from './Navbar';
 import Auth from '../utils/auth';
+import CreateTripForm from './LoggedIn/YourTripDetails/CreateTripForm';
 
 const Home = () => {
   return (
@@ -29,26 +30,27 @@ const Home = () => {
         <div>
           <Navbar />
           <div>Your Trips</div>
-          <div className="row">
-            <div className="card text-center mb-3 col-3">
-                <div className="card-body">
-                  <h5 className="card-title">Trip Titles</h5>
-                  <button href="#" class="btn btn-primary">Go somewhere</button>
-                </div>
-              </div>
+            <div className="row">
               <div className="card text-center mb-3 col-3">
-                <div className="card-body">
-                  <h5 className="card-title">Trip Titles</h5>
-                  <button href="#" class="btn btn-primary">Go somewhere</button>
+                  <div className="card-body">
+                    <h5 className="card-title">Trip Titles</h5>
+                    <button href="#" class="btn btn-primary">Go somewhere</button>
+                  </div>
                 </div>
-              </div>
-              <div className="card text-center mb-3 col-3">
-                <div className="card-body">
-                  <h5 className="card-title">Trip Titles</h5>
-                  <button href="#" class="btn btn-primary">Go somewhere</button>
+                <div className="card text-center mb-3 col-3">
+                  <div className="card-body">
+                    <h5 className="card-title">Trip Titles</h5>
+                    <button href="#" class="btn btn-primary">Go somewhere</button>
+                  </div>
                 </div>
-              </div>
-          </div>
+                <div className="card text-center mb-3 col-3">
+                  <div className="card-body">
+                    <h5 className="card-title">Trip Titles</h5>
+                    <button href="#" class="btn btn-primary">Go somewhere</button>
+                  </div>
+                </div>
+            </div>
+                <CreateTripForm />
           </div>
       )}
 
