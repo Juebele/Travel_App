@@ -38,7 +38,7 @@ function App() {
           />
           <Route
             path="/trips/:tripid"
-            element={<YourTripDetails />}
+            element={<YourTripDashboard />}
           />
         </Routes>
       </Router>
