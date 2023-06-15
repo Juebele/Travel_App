@@ -34,19 +34,19 @@ const Home = () => {
               <div className="card text-center mb-3 col-3">
                   <div className="card-body">
                     <h5 className="card-title">Trip Titles</h5>
-                    <button href="#" class="btn btn-primary">Go somewhere</button>
+                    <button href="#" className="btn btn-primary">Go somewhere</button>
                   </div>
                 </div>
                 <div className="card text-center mb-3 col-3">
                   <div className="card-body">
                     <h5 className="card-title">Trip Titles</h5>
-                    <button href="#" class="btn btn-primary">Go somewhere</button>
+                    <button href="#" className="btn btn-primary">Go somewhere</button>
                   </div>
                 </div>
                 <div className="card text-center mb-3 col-3">
                   <div className="card-body">
                     <h5 className="card-title">Trip Titles</h5>
-                    <button href="#" class="btn btn-primary">Go somewhere</button>
+                    <button href="#" className="btn btn-primary">Go somewhere</button>
                   </div>
                 </div>
             </div>
