@@ -18,27 +18,27 @@ export default function YourTripDetails() {
             Trip planner: Insert username here
         </div>
         <div>
-            <button>
+            <button className="btn btn-primary">
                 Invite
             </button>
         </div>
         <div>
-            <button onClick={() => handleTabClick(0)} className={activeTab === 0 ? 'active' : ''}>
+            <button onClick={() => handleTabClick(0)} className={`btn ${activeTab === 0 ? 'btn-primary' : 'btn-light'}`}>
                 Create Trip
             </button>
-            <button onClick={() => handleTabClick(1)} className={activeTab === 1 ? 'active' : ''}>
+            <button onClick={() => handleTabClick(1)} className={`btn ${activeTab === 1 ? 'btn-primary' : 'btn-light'}`}>
                 Overview
             </button>
-            <button onClick={() => handleTabClick(2)} className={activeTab === 2 ? 'active' : ''}>
+            <button onClick={() => handleTabClick(2)} className={`btn ${activeTab === 2 ? 'btn-primary' : 'btn-light'}`}>
                 Dates
             </button>
-            <button onClick={() => handleTabClick(3)} className={activeTab === 0 ? 'active' : ''}>
+            <button onClick={() => handleTabClick(3)} className={`btn ${activeTab === 3 ? 'btn-primary' : 'btn-light'}`}>
                 Destinations
             </button>
-            <button onClick={() => handleTabClick(4)} className={activeTab === 0 ? 'active' : ''}>
+            <button onClick={() => handleTabClick(4)} className={`btn ${activeTab === 4 ? 'btn-primary' : 'btn-light'}`}>
                 Lodging
             </button>
-            <button onClick={() => handleTabClick(5)} className={activeTab === 0 ? 'active' : ''}>
+            <button onClick={() => handleTabClick(5)} className={`btn ${activeTab === 5 ? 'btn-primary' : 'btn-light'}`}>
                 Itinerary
             </button>
         </div>
