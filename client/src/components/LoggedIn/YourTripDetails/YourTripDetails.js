@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import CreateTripForm from './CreateTripForm';
+import Dates from './Dates';
 import Lodging from './Lodging';
 import Destinations from './Destinations';
 
@@ -19,34 +20,34 @@ export default function YourTripDetails() {
             Trip planner: Insert username here
         </div>
         <div>
-            <button>
+            <button className="btn btn-primary">
                 Invite
             </button>
         </div>
-        <div>
-            <button onClick={() => handleTabClick(0)} className={activeTab === 0 ? 'active' : ''}>
+        <div className="d-flex justify-content-center mb-4">
+            <button onClick={() => handleTabClick(0)} className={`btn ${activeTab === 0 ? 'btn-primary' : 'btn-light'}`}>
                 Create Trip
             </button>
-            <button onClick={() => handleTabClick(1)} className={activeTab === 1 ? 'active' : ''}>
+            <button onClick={() => handleTabClick(1)} className={`btn ${activeTab === 1 ? 'btn-primary' : 'btn-light'}`}>
                 Overview
             </button>
-            <button onClick={() => handleTabClick(2)} className={activeTab === 2 ? 'active' : ''}>
+            <button onClick={() => handleTabClick(2)} className={`btn ${activeTab === 2 ? 'btn-primary' : 'btn-light'}`}>
                 Dates
             </button>
-            <button onClick={() => handleTabClick(3)} className={activeTab === 3 ? 'active' : ''}>
+            <button onClick={() => handleTabClick(3)} className={`btn ${activeTab === 3 ? 'btn-primary' : 'btn-light'}`}>
                 Destinations
             </button>
-            <button onClick={() => handleTabClick(4)} className={activeTab === 4 ? 'active' : ''}>
+            <button onClick={() => handleTabClick(4)} className={`btn ${activeTab === 4 ? 'btn-primary' : 'btn-light'}`}>
                 Lodging
             </button>
-            <button onClick={() => handleTabClick(5)} className={activeTab === 5 ? 'active' : ''}>
+            <button onClick={() => handleTabClick(5)} className={`btn ${activeTab === 5 ? 'btn-primary' : 'btn-light'}`}>
                 Itinerary
             </button>
         </div>
         <div>
             {activeTab === 0 && <CreateTripForm />}
             {activeTab === 1 && <div>Insert the Overview here</div>}
-            {activeTab === 2 && <div>Insert Dates here</div>}
+            {activeTab === 2 && <Dates />}
             {activeTab === 3 && <Destinations />}
             {activeTab === 4 && <Lodging />}
             {activeTab === 5 && <div>Insert Itinerary here</div>}

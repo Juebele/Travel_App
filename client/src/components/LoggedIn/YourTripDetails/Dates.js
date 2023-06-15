@@ -1,0 +1,50 @@
+import React, { useEffect, useState } from 'react';
+import { useQuery } from '@apollo/client';
+import { GET_DATES } from '../../../utils/queries';
+
+export default function Dates() {
+    const { loading, data } = useQuery(GET_DATES);
+    const trips = data?.trips || [];
+    // The number in the following array will need to be changed based on which trip the user chooses to see from the home page
+    const trip = trips[0];
+
+    const calculateDays = (startDate, endDate) => {
+        const start = new Date(startDate);
+        const end = new Date(endDate);
+        const timeDiff = Math.abs(end - start);
+        const days = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
+        return days;
+      };
+    
+    return (
+        <div>
+            {loading ? (
+                <div>Loading...</div>
+            ) : !trips.length ? (
+                <div>Dates haven't been set yet</div>
+            ) : (
+                <div className="card mx-auto mb-4" style={{ maxWidth: '400px' }}>
+                    <div className="card-body">
+                        <h5 className="card-title text-center">Trip Duration</h5>
+                        <div className="row">
+                        <div className="col-6">
+                            <p className="fw-bold mb-1">Start Date:</p>
+                            <p>{trip.startDate}</p>
+                        </div>
+                        <div className="col-6">
+                            <p className="fw-bold mb-1">End Date:</p>
+                            <p>{trip.endDate}</p>
+                        </div>
+                        </div>
+                        <div className="row">
+                        <div className="col">
+                            <p className="fw-bold mb-1">Number of Days:</p>
+                            <p>{calculateDays(trip.startDate, trip.endDate)}</p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            )}
+        </div>
+    );
+}
