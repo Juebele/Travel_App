@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import CreateTripForm from './CreateTripForm';
+import Lodging from './Lodging';
 import Destinations from './Destinations';
 
 export default function YourTripDetails() {
@@ -47,7 +48,7 @@ export default function YourTripDetails() {
             {activeTab === 1 && <div>Insert the Overview here</div>}
             {activeTab === 2 && <div>Insert Dates here</div>}
             {activeTab === 3 && <Destinations />}
-            {activeTab === 4 && <div>Insert Lodging here</div>}
+            {activeTab === 4 && <Lodging />}
             {activeTab === 5 && <div>Insert Itinerary here</div>}
         </div>
     </div>
