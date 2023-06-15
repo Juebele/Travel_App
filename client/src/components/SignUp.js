@@ -6,6 +6,8 @@ import { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../utils/mutations';
 
+import Navbar from './Navbar'
+
 function SignUp() {
 
     const [ userInfo, setUserInfo ] = useState({
@@ -41,9 +43,10 @@ function SignUp() {
 
     return (
         <div>
+            <Navbar />
             <form className="login-signup-form row mx-auto col-10 col-md-8 col-lg-6" onSubmit={handleFormSubmit}>
                 <h1 className="formHeader">
-                    Welcome to (name)
+                    Welcome to Bon Voyage!
                 </h1>
                 <div className="mb-3">
                     <label htmlFor="exampleInputEmail1" className="form-label">Username</label>
