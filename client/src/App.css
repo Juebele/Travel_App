@@ -1,5 +1,7 @@
 /* UNIVERSAL STYLING */
 * {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --logo-color: #0470D3;
     --color1: whitesmoke;
     --color2: #FAF0E4;
     --color3: #9BCDD2;
@@ -8,17 +10,57 @@
 }
 
 /* HOMEPAGE STYLING */
-.homepage {
-    justify-content: center;
+#homepage {
+    height: 100vh;
 }
 
+#homepage-bg {
+    background-image: url(./Assets/imgs/home-main.jpeg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    padding-top: 5rem;
+}
+
+#another-home-el {
+    display: flex;
+    justify-content: right;
+}
+
+.homepage-el {
+    margin: 5rem;
+    text-align: right;
+}
+
+.homepage-el h1 {
+    font-size: 4.5rem;
+    color: white;
+    font-weight: 700;
+    padding-bottom: 2rem;
+}
+
+#getStartedBtn {
+    background-color: var(--logo-color);
+}
+
+#getStartedLink {
+    color: var(--color1);
+    font-size: large;
+}
+
+/* not sure if this is applying to any button? It is not affecting the Home.js component */
 .buttons {
     background-color: #FF8551;
 }
 
 /* NAVBAR STYLING */
 #customNav {
-    margin: 1vb 6vb;
+    margin: 0 5vb;
+}
+
+#logo {
+    height: 3rem;
 }
 
 /* FOOTER STYLING */
@@ -37,10 +79,6 @@
 
 .customLink {
     text-decoration: none;
-}
-
-#getStarted {
-    color: var(--color1);
 }
 
 #tripHome {

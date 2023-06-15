@@ -5,6 +5,8 @@ import { LOGIN_USER } from '../utils/mutations';
 import { useMutation } from '@apollo/client';
 import Auth from '../utils/auth';
 import Home from './Home';
+import Navbar from './Navbar'
+import YourTripDashboard from './LoggedIn/YourTripDashboard';
 
 
 function Login() {
@@ -40,12 +42,12 @@ function Login() {
             username: '',
             password: ''
         })
-
     }
 
 
     return (
         <div>
+            <Navbar />
             {!Auth.loggedIn() ? (
                 <div>
                     <form onSubmit={loginFormHandler} className="login-signup-form row mx-auto col-10 col-md-8 col-lg-6">
@@ -81,7 +83,7 @@ function Login() {
                     </form>
                 </div>
             ) : (
-                <Home />
+                <YourTripDashboard />
             )}
         </div>
     )
