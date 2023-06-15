@@ -1,11 +1,14 @@
 import React from 'react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Auth from '../../../utils/auth';
 
 import { useMutation } from '@apollo/client';
 import { ADD_TRIP } from '../../../utils/mutations';
 
 function CreateTripForm() {
+
+    const userid = Auth.getProfile()?.data?._id;
 
     const [tripInfo, setTripInfo] = useState({
         tripName: '',
@@ -14,8 +17,8 @@ function CreateTripForm() {
         endDate: '',
         lodgingName: '',
         lodgingAddress: '',
-        lodgingContact: ''
-
+        lodgingContact: '',
+        userid: userid
     });
 
     const [ addTrip, {error} ] = useMutation(ADD_TRIP);
