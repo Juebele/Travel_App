@@ -47,6 +47,9 @@ export const QUERY_TRIP = gql`
   }
 `;
 
+// add a query to get all trips for the dashboard
+
+
 export const QUERY_ME = gql`
   query Me {
     me {

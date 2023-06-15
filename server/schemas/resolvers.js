@@ -51,6 +51,11 @@ const resolvers = {
                 _id: userid
             }, {$addToSet: {trips: trip._id}})
             return trip;
+        },
+        editTrip: async (parent, {tripid, tripName, location, startDate, endDate, lodgingName, lodgingAddress, lodgingContact }) => {
+            const revisedTrip = await Trip.findOneAndUpdate({
+                _id: tripid
+            }, {})
         }
     }
     

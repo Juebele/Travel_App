@@ -50,7 +50,7 @@ type Mutation {
     login(username: String!, password: String!): Auth
     addUser(username: String!, password: String!): Auth
     addTrip(userid: ID, tripName: String!, location: String!, startDate: String!, endDate: String!, lodgingName: String!, lodgingAddress: String!, lodgingContact: String!): Trip
-    
+    editTrip(tripName: String!, location: String!, startDate: String!, endDate: String!, lodgingName: String!, lodgingAddress: String!, lodgingContact: String!)
 }
 `;
 
