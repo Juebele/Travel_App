@@ -60,11 +60,15 @@ const Home = () => {
                     </button>
                     <br/>
                     <button onClick={() => {
-                      deleteTrip({
+                      if(window.confirm('Are you sure you want to delete this trip?')) {
+                        deleteTrip({
                           variables: {id: trip._id}
                         })
                         window.location.reload()
-                      }} 
+                      } else {
+                        window.location.reload()
+                      }
+                      }}
                       className='mt-2 justify-content-end' style={{ border: 'none', background: 'white' }}>
                       <img src={trashcan} style={{ height: '20px', width: '20px', }}/>
                     </button>  
