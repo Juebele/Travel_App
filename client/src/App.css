@@ -126,3 +126,8 @@
 li {
     list-style-type: none;
 }
+
+li a{
+    color: whitesmoke;
+    text-decoration: none;
+}
