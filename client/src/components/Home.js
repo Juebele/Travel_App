@@ -29,8 +29,8 @@ const Home = () => {
                     Trip planning made easy.
                   </h2>
                 </div>
-                <button id="getStartedBtn" className="btn btn-primary" style={{ backgroundColor: textColor, border: 'none' }}>
-                  <Link id="getStartedLink" className="customLink" to={`/sign-up`}>
+                <button id="getStartedBtn" className="home-start-btn" style={{ backgroundColor: textColor, border: 'none' }}>
+                  <Link id="getStartedLink" className="customLink" to={`/sign-up`} style={{ fontSize: "50px", fontWeight: "bold"}}>
                     Get Started
                   </Link>
                 </button>
@@ -41,7 +41,7 @@ const Home = () => {
       ) : (
         <div>
           <Navbar />
-          <div>Your Trips</div>
+          <h2 className="d-flex justify-content-center my-4 fw-bold">Your Trips</h2>
           {data ? data.me.trips.map((trip) => {
             return (
               <div className="card text-center mb-3 col-3">
