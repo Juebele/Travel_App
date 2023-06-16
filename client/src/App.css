@@ -15,6 +15,7 @@
 }
 
 #homepage-bg {
+    position: relative;
     background-image: url(./Assets/imgs/home-main.jpeg);
     background-size: cover;
     background-position: center center;
@@ -52,6 +53,38 @@
 /* not sure if this is applying to any button? It is not affecting the Home.js component */
 .buttons {
     background-color: #FF8551;
+}
+
+/* CSS for the home button */
+.home-start-btn {
+    margin: 10px;
+    padding: 15px 30px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: #4A4945;
+    border-radius: 50px;
+    /* display: block; */
+    border: 0px;
+    font-weight: 700;
+    box-shadow: 0px 0px 14px -7px #f09819;
+    background-image: linear-gradient(45deg, #FF512F 0%, #FFC90E  51%, #FF512F  100%);
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.home-start-btn:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+
+.home-start-btn:active {
+    transform: scale(0.95);
 }
 
 /* NAVBAR STYLING */
@@ -124,4 +157,9 @@
 
 li {
     list-style-type: none;
+}
+
+li a{
+    color: whitesmoke;
+    text-decoration: none;
 }

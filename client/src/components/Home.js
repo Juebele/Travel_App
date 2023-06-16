@@ -8,6 +8,7 @@ import { useQuery } from '@apollo/client';
 import { QUERY_ME } from '../utils/queries';
 
 const Home = () => {
+  const textColor= '#950952';
 
   const { loading, data } = useQuery(QUERY_ME);
   console.log(data);
@@ -18,13 +19,18 @@ const Home = () => {
         <div id="homepage">
           <Navbar />
           <div id="homepage-bg">
-            <div id="another-home-el" className="container-fluid">
-              <div className="homepage-el col-6">
-                <h1>
-                  Welcome to Bon Voyage! Trip planning made easy.
+            <div id="another-home-el" className="container-fluid ">
+              <div className="homepage-el">
+                <h1 style={{color: textColor}} className=''>
+                  Welcome to Bon Voyage! 
                 </h1>
-                <button id="getStartedBtn" className="btn btn-primary">
-                  <Link id="getStartedLink" className="customLink" to={`/sign-up`}>
+                <div style={{marginBottom: '50px'}}>
+                  <h2 style={{color: textColor, fontSize: '50px', fontWeight: 'bold', }} className=''>
+                    Trip planning made easy.
+                  </h2>
+                </div>
+                <button id="getStartedBtn" className="home-start-btn">
+                  <Link id="getStartedLink" className="customLink" to={`/sign-up`} style={{ fontSize: "50px", fontWeight: "bold"}}>
                     Get Started
                   </Link>
                 </button>
@@ -35,23 +41,26 @@ const Home = () => {
       ) : (
         <div>
           <Navbar />
-          <div>Your Trips</div>
-          {data ? data.me.trips.map((trip) => {
-            return (
-              <div className="card text-center mb-3 col-3">
-                <div className="card-body">
-                  <h5 className="card-title">{trip.tripName}</h5>
-                  <button className="btn btn-primary">
-                    <Link to={`/trips/${trip._id}`}>
-                      View Trip
-                    </Link>
-                  </button>
+          <h2 className="d-flex justify-content-center my-4 fw-bold">Your Trips</h2>
+          <div className='d-flex justify-content-center'>
+            {data ? data.me.trips.map((trip) => {
+              return (
+                <div className="card text-center mb-3 col-3 mx-1">
+                  <div className="card-body shadow">
+                    <h5 className="card-title">{trip.tripName}</h5>
+                    <button className="btn btn-primary">
+                      <Link to={`/trips/${trip._id}`} style={{ textDecoration: 'none', color: 'white' }}>
+                        View Trip
+                      </Link>
+                    </button>
+                  </div>
                 </div>
-              </div>
-            )
-          }) : null }
-            <CreateTripForm />
+              ) 
+            }): null }
           </div>
+          <h2 className="d-flex justify-content-center my-4 fw-bold">Create a new trip</h2>
+          <CreateTripForm />
+        </div>
       )}
 
     </div>

@@ -46,7 +46,7 @@ function SignUp() {
             <Navbar />
             <form className="login-signup-form row mx-auto col-10 col-md-8 col-lg-6" onSubmit={handleFormSubmit}>
                 <h1 className="formHeader">
-                    Welcome to Bon Voyage!
+                    Sign up for your next adventure!
                 </h1>
                 <div className="mb-3">
                     <label htmlFor="exampleInputEmail1" className="form-label">Username</label>
@@ -72,7 +72,7 @@ function SignUp() {
                     </Link>
                 </div>
                 <div className='d-flex justify-content-center'>
-                <button id="submit-login-signup" type="submit" className="btn btn-primary">Sign Up</button>
+                    <button id="submit-login-signup" type="submit" className="btn btn-primary mb-5">Sign Up</button>
                 </div>
             </form>
         </div>
