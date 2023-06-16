@@ -42,7 +42,7 @@ const Home = () => {
         <div>
           <Navbar />
           <h2 className="d-flex justify-content-center my-4 fw-bold">Your Trips</h2>
-          
+
             {data ? data.me.trips.map((trip) => {
               return (
                 <div className="card text-center mb-3 col-3">
@@ -55,12 +55,11 @@ const Home = () => {
                     </button>
                   </div>
                 </div>
-              )
-            
-          }) : null }
+              ) 
+            }) : null }
             <h2 className="d-flex justify-content-center my-4 fw-bold">Create a new trip</h2>
             <CreateTripForm />
-          </div>
+        </div>
       )}
 
     </div>
