@@ -6,6 +6,7 @@ import Auth from '../utils/auth';
 import CreateTripForm from './LoggedIn/YourTripDetails/CreateTripForm';
 import { useQuery } from '@apollo/client';
 import { QUERY_ME } from '../utils/queries';
+import trashcan from '../../src/Assets/imgs/trashcan.png'
 
 const Home = () => {
   const textColor = '#950952';
@@ -57,8 +58,7 @@ const Home = () => {
                         View Trip
                       </Link>
                     </button>
-                    <button onClick={deleteTrip}>Delete Trip</button>
-
+                    <button onClick={deleteTrip}><img src={trashcan}></img></button>
                   </div>
                 </div>
               )
