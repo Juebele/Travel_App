@@ -51,6 +51,7 @@ type Mutation {
     addUser(username: String!, password: String!): Auth
     addTrip(userid: ID, tripName: String!, location: String!, startDate: String!, endDate: String!, lodgingName: String!, lodgingAddress: String!, lodgingContact: String!): Trip
     editTrip(_id: ID!, tripName: String, location: String, startDate: String, endDate: String, lodgingName: String, lodgingAddress: String, lodgingContact: String): Trip
+    deleteTrip(_id: ID!): Trip
 }
 `;
 

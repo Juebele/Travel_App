@@ -15,7 +15,6 @@
 }
 
 #homepage-bg {
-    position: relative;
     background-image: url(./Assets/imgs/home-main.jpeg);
     background-size: cover;
     background-position: center center;
@@ -36,9 +35,15 @@
 
 .homepage-el h1 {
     font-size: 4.5rem;
-    color: white;
     font-weight: 700;
     padding-bottom: 2rem;
+}
+
+.home-text {
+    font-size: 50px;
+    font-weight: bold;
+    color: var(--color2);
+    text-shadow: 5px 5px 5px black;
 }
 
 #getStartedBtn {
@@ -49,6 +54,7 @@
     color: var(--color1);
     font-size: large;
 }
+
 
 /* not sure if this is applying to any button? It is not affecting the Home.js component */
 .buttons {
@@ -102,7 +108,20 @@
 }
 
 .footer p {
-    margin: .5em;
+    margin: 0 .25rem;
+    display: inline;
+    text-align: center;
+    font-size: .8rem;
+}
+
+#contributorLinks {
+    text-align: center;
+}
+
+.footer-link {
+    text-decoration: none;
+    /* font-weight: bold; */
+    font-size: .8rem;
 }
 
 #logo {
@@ -118,11 +137,22 @@
     color: var(--color1);
 }
 
+#tripContainers {
+    flex-wrap: wrap;
+}
 
 
 /* SIGN-UP and LOGIN FORM STYLING */
+.login-signup-form-container {
+    height: 100vh;
+    margin-top: 10rem;
+}
+
 .login-signup-form {
-    padding-top: 5rem;
+    padding-top: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    
 }
 
 .formHeader {

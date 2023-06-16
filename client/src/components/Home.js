@@ -6,17 +6,17 @@ import Auth from '../utils/auth';
 import CreateTripForm from './LoggedIn/YourTripDetails/CreateTripForm';
 import { useQuery } from '@apollo/client';
 import { QUERY_ME } from '../utils/queries';
-import trashcan from '../../src/Assets/imgs/trashcan.png'
+import trashcan from '../../src/Assets/imgs/trashcan.png';
+import { DELETE_TRIP } from '../utils/mutations';
+import { useMutation } from '@apollo/client';
 
 const Home = () => {
-  const textColor = '#950952';
+  const textColor = 'whitesmoke';
 
   const { loading, data } = useQuery(QUERY_ME);
   console.log(data);
 
-  function deleteTrip() {
-    window.confirm("Delete")
-  };
+  const [ deleteTrip, {error} ] = useMutation(DELETE_TRIP);
 
   return (
     <div>
@@ -26,11 +26,11 @@ const Home = () => {
           <div id="homepage-bg">
             <div id="another-home-el" className="container-fluid ">
               <div className="homepage-el">
-                <h1 style={{ color: textColor }} className=''>
+                <h1 className='home-text'>
                   Welcome to Bon Voyage!
                 </h1>
                 <div style={{ marginBottom: '50px' }}>
-                  <h2 style={{ color: textColor, fontSize: '50px', fontWeight: 'bold', }} className=''>
+                  <h2 className='home-text'>
                     Trip planning made easy.
                   </h2>
                 </div>
@@ -47,10 +47,10 @@ const Home = () => {
         <div>
           <Navbar />
           <h2 className="d-flex justify-content-center my-4 fw-bold">Your Trips</h2>
-          <div className='d-flex justify-content-center'>
+          <div id="tripContainers" className='d-flex justify-content-center'>
             {data ? data.me.trips.map((trip) => {
               return (
-                <div className="card text-center mb-3 col-3 mx-1">
+                <div className="card border-primary text-center mb-3 col-3 mx-1">
                   <div className="card-body shadow">
                     <h5 className="card-title">{trip.tripName}</h5>
                     <button className="btn btn-primary">
@@ -58,7 +58,30 @@ const Home = () => {
                         View Trip
                       </Link>
                     </button>
-                    <button onClick={deleteTrip}><img src={trashcan}></img></button>
+                    <br/>
+                    <button onClick={() => {
+                      if(window.confirm('Are you sure you want to delete this trip?')) {
+                        deleteTrip({
+                          variables: {id: trip._id}
+                        })
+                        window.location.reload()
+                      } else {
+                        window.location.reload()
+                      }
+                      }}
+                      className='mt-2 justify-content-end' style={{ border: 'none', background: 'white' }}>
+                      <img 
+                        className='border border-danger rounded'
+                        src={trashcan} 
+                        style={{ height: '20px', width: '20px' }} 
+                        onMouseEnter={(e) => {
+                          e.target.style.background = 'pink';
+                        }}
+                        onMouseLeave={(e) => {
+                          e.target.style.background = 'white';
+                        }}
+                      />
+                    </button>  
                   </div>
                 </div>
               )

@@ -49,8 +49,8 @@ function Login() {
         <div>
             <Navbar />
             {!Auth.loggedIn() ? (
-                <div>
-                    <form onSubmit={loginFormHandler} className="login-signup-form row mx-auto col-10 col-md-8 col-lg-6">
+                <div className="login-signup-form-container">
+                    <form onSubmit={loginFormHandler} className="card login-signup-form row mx-auto col-10 col-md-8 col-lg-6 shadow">
                         <h1 className="formHeader">
                             Welcome to Bon Voyage!
                         </h1>
