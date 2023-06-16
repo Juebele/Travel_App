@@ -52,6 +52,10 @@ mutation editTrip($tripName: String, $id: ID!) {
 }
 `;
 
-// export const DELETE_TRIP = gql`
-
-// `;
+export const DELETE_TRIP = gql`
+mutation deleteTrip($id: ID!) {
+  deleteTrip(_id: $id) {
+    _id
+  }
+}
+`;

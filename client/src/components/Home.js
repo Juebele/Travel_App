@@ -6,7 +6,9 @@ import Auth from '../utils/auth';
 import CreateTripForm from './LoggedIn/YourTripDetails/CreateTripForm';
 import { useQuery } from '@apollo/client';
 import { QUERY_ME } from '../utils/queries';
-import trashcan from '../../src/Assets/imgs/trashcan.png'
+import trashcan from '../../src/Assets/imgs/trashcan.png';
+import { DELETE_TRIP } from '../utils/mutations';
+import { useMutation } from '@apollo/client';
 
 const Home = () => {
   const textColor = 'whitesmoke';
@@ -14,9 +16,7 @@ const Home = () => {
   const { loading, data } = useQuery(QUERY_ME);
   console.log(data);
 
-  function deleteTrip() {
-    window.confirm("Are you sure that you want to delete this trip?")
-  };
+  const [ deleteTrip, {error} ] = useMutation(DELETE_TRIP);
 
   return (
     <div>
@@ -59,7 +59,13 @@ const Home = () => {
                       </Link>
                     </button>
                     <br/>
-                    <button onClick={deleteTrip} className='mt-2 justify-content-end' style={{ border: 'none', background: 'white' }}>
+                    <button onClick={() => {
+                      deleteTrip({
+                          variables: {id: trip._id}
+                        })
+                        window.location.reload()
+                      }} 
+                      className='mt-2 justify-content-end' style={{ border: 'none', background: 'white' }}>
                       <img src={trashcan} style={{ height: '20px', width: '20px', }}/>
                     </button>  
                   </div>

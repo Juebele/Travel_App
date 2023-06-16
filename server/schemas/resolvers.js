@@ -57,14 +57,11 @@ const resolvers = {
             return revisedTrip;
         },
         deleteTrip: async (parent, args, context) => {
-            // console.log(context.user); These are both returning undefined
-            // console.log(context.trip);
-            
+            console.log(context.user);
+            console.log(args);
             if (context.user) {
-                return Trip.deleteOne(
-                    { _id: context.user._id },
-                    { $pull: { trips: trip } },
-                    { new: true }
+                return Trip.findOneAndDelete(
+                    { _id: args._id }
                 );
             }
             throw new AuthenticationError('You must be logged in to make a change.');
