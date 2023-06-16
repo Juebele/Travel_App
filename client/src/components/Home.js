@@ -48,7 +48,7 @@ const Home = () => {
                 <div className="card text-center mb-3 col-3">
                   <div className="card-body">
                     <h5 className="card-title">{trip.tripName}</h5>
-                    <button className="btn" style={{ backgroundColor: 'black', color: 'white'}}>
+                    <button className="btn btn-primary">
                       <Link to={`/trips/${trip._id}`} style={{ textDecoration: 'none', color: 'white' }}>
                         View Trip
                       </Link>
