@@ -8,10 +8,14 @@ import { useQuery } from '@apollo/client';
 import { QUERY_ME } from '../utils/queries';
 
 const Home = () => {
-  const textColor= '#950952';
+  const textColor = '#950952';
 
   const { loading, data } = useQuery(QUERY_ME);
   console.log(data);
+
+  function deleteTrip() {
+    window.confirm("Delete")
+  };
 
   return (
     <div>
@@ -21,16 +25,16 @@ const Home = () => {
           <div id="homepage-bg">
             <div id="another-home-el" className="container-fluid ">
               <div className="homepage-el">
-                <h1 style={{color: textColor}} className=''>
-                  Welcome to Bon Voyage! 
+                <h1 style={{ color: textColor }} className=''>
+                  Welcome to Bon Voyage!
                 </h1>
-                <div style={{marginBottom: '50px'}}>
-                  <h2 style={{color: textColor, fontSize: '50px', fontWeight: 'bold', }} className=''>
+                <div style={{ marginBottom: '50px' }}>
+                  <h2 style={{ color: textColor, fontSize: '50px', fontWeight: 'bold', }} className=''>
                     Trip planning made easy.
                   </h2>
                 </div>
                 <button id="getStartedBtn" className="home-start-btn">
-                  <Link id="getStartedLink" className="customLink" to={`/sign-up`} style={{ fontSize: "50px", fontWeight: "bold"}}>
+                  <Link id="getStartedLink" className="customLink" to={`/sign-up`} style={{ fontSize: "50px", fontWeight: "bold" }}>
                     Get Started
                   </Link>
                 </button>
@@ -53,10 +57,12 @@ const Home = () => {
                         View Trip
                       </Link>
                     </button>
+                    <button onClick={deleteTrip}>Delete Trip</button>
+
                   </div>
                 </div>
-              ) 
-            }): null }
+              )
+            }) : null}
           </div>
           <h2 className="d-flex justify-content-center my-4 fw-bold">Create a new trip</h2>
           <CreateTripForm />
