@@ -5,7 +5,7 @@ import { EDIT_TRIP } from '../../../utils/mutations';
 
 export default function Dates() {
     const { loading, data } = useQuery(GET_DATES);
-    const trips = data?.trips || [];
+    const trips = data?.trips || [1];
     // The number in the following array will need to be changed based on which trip the user chooses to see from the home page
     const trip = trips[0];
 
@@ -22,8 +22,6 @@ export default function Dates() {
     const [startDate, setStartDate] = useState();
 
     const [endDate, setEndDate] = useState();
-    
-    console.log(trip);
 
     return (
         <div>
