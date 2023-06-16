@@ -50,7 +50,7 @@ const Home = () => {
           <div className='d-flex justify-content-center'>
             {data ? data.me.trips.map((trip) => {
               return (
-                <div className="card text-center mb-3 col-3 mx-1">
+                <div className="card border-primary text-center mb-3 col-3 mx-1">
                   <div className="card-body shadow">
                     <h5 className="card-title">{trip.tripName}</h5>
                     <button className="btn btn-primary">
