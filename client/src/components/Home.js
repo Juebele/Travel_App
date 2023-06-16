@@ -70,7 +70,17 @@ const Home = () => {
                       }
                       }}
                       className='mt-2 justify-content-end' style={{ border: 'none', background: 'white' }}>
-                      <img src={trashcan} style={{ height: '20px', width: '20px', }}/>
+                      <img 
+                        className='border border-danger rounded'
+                        src={trashcan} 
+                        style={{ height: '20px', width: '20px' }} 
+                        onMouseEnter={(e) => {
+                          e.target.style.background = 'pink';
+                        }}
+                        onMouseLeave={(e) => {
+                          e.target.style.background = 'white';
+                        }}
+                      />
                     </button>  
                   </div>
                 </div>
