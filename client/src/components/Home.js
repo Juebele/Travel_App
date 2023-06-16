@@ -47,7 +47,7 @@ const Home = () => {
         <div>
           <Navbar />
           <h2 className="d-flex justify-content-center my-4 fw-bold">Your Trips</h2>
-          <div className='d-flex justify-content-center'>
+          <div id="tripContainers" className='d-flex justify-content-center'>
             {data ? data.me.trips.map((trip) => {
               return (
                 <div className="card border-primary text-center mb-3 col-3 mx-1">

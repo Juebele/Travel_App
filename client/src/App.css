@@ -137,6 +137,10 @@
     color: var(--color1);
 }
 
+#tripContainers {
+    flex-wrap: wrap;
+}
+
 
 
 /* SIGN-UP and LOGIN FORM STYLING */

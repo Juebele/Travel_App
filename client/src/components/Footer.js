@@ -17,11 +17,6 @@ function Footer() {
                 <p> | </p>
                 <p><a href='https://github.com/juebele' target='_blank' className='footer-link'>James Uebele</a></p>
             </div>
-            {/* <div className='container-fluid col links'>
-                <p className='container-fluid row justify-content-center'>Home</p>
-                <p className='container-fluid row justify-content-center'>Sign Up</p>
-                <p className='container-fluid row justify-content-center'>Log In</p>
-            </div> */}
         </div>
     )
 }
