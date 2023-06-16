@@ -15,7 +15,7 @@ const Home = () => {
   console.log(data);
 
   function deleteTrip() {
-    window.confirm("Delete")
+    window.confirm("Are you sure that you want to delete this trip?")
   };
 
   return (
@@ -58,7 +58,10 @@ const Home = () => {
                         View Trip
                       </Link>
                     </button>
-                    <button onClick={deleteTrip}><img src={trashcan}></img></button>
+                    <br/>
+                    <button onClick={deleteTrip} className='mt-2 justify-content-end' style={{ border: 'none', background: 'white' }}>
+                      <img src={trashcan} style={{ height: '20px', width: '20px', }}/>
+                    </button>  
                   </div>
                 </div>
               )
