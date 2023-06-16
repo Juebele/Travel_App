@@ -57,8 +57,11 @@ const resolvers = {
             return revisedTrip;
         },
         deleteTrip: async (parent, args, context) => {
+            // console.log(context.user); These are both returning undefined
+            // console.log(context.trip);
+            
             if (context.user) {
-                return Trip.findOneAndUpdate(
+                return Trip.deleteOne(
                     { _id: context.user._id },
                     { $pull: { trips: trip } },
                     { new: true }
