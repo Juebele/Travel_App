@@ -15,7 +15,6 @@
 }
 
 #homepage-bg {
-    position: relative;
     background-image: url(./Assets/imgs/home-main.jpeg);
     background-size: cover;
     background-position: center center;
