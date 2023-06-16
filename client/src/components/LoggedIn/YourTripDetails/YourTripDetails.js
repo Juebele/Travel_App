@@ -1,18 +1,38 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import CreateTripForm from './CreateTripForm';
 import Dates from './Dates';
 import Lodging from './Lodging';
 import Destinations from './Destinations';
+import { useParams } from 'react-router-dom';
 
-export default function YourTripDetails() {
+export default function YourTripDetails({trips})  {
   const [activeTab, setActiveTab] = useState(0);
-
+  const { tripid } = useParams();
   const handleTabClick = (index) => {
     setActiveTab(index);
   }
 
+ const [currentTripId, setCurrentTripId] = useState('');
+
+//  const trackCurrentTripId = (e) => {
+//     const presentTripId = e.target.id;
+//     setCurrentTripId(presentTripId);
+//     console.log(currentTripId);
+//  }
+
+//   useEffect(() => {
+//     console.log('hi')
+//   }, [activeTab])
+
+
+
   return (
     <div>
+        {/* <div className='container' onClick={trackCurrentTripId}>
+        {trips.map((trip) => (
+           <button key={trip._id} id={trip._id}>{trip._id}</button>  
+        ))}
+        </div > */}
         <h2 className="d-flex justify-content-center my-4 fw-bold">
             Your Trip
         </h2>
@@ -43,9 +63,9 @@ export default function YourTripDetails() {
         </div>
         <div>
             {activeTab === 0 && <div>Insert the Overview here</div>}
-            {activeTab === 1 && <Dates />}
-            {activeTab === 2 && <Destinations />}
-            {activeTab === 3 && <Lodging />}
+            {activeTab === 1 && <Dates id={tripid} />}
+            {activeTab === 2 && <Destinations id={tripid} />}
+            {activeTab === 3 && <Lodging id={tripid} />}
             {activeTab === 4 && <div>Insert Itinerary here</div>}
         </div>
     </div>

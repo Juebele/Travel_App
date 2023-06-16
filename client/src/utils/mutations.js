@@ -39,15 +39,16 @@ mutation addTrip ($userid: ID, $tripName: String!, $location: String!, $startDat
 `;
 
 export const EDIT_TRIP = gql`
-mutation editTrip($tripName: String, $id: ID!) {
-  editTrip(tripName: $tripName, _id: $id) {
-    tripName
-    location
-    startDate
+mutation editTrip($id: ID!, $tripName: String, $location: String, $startDate: String, $endDate: String, $lodgingName: String, $lodgingAddress: String, $lodgingContact: String) {
+  editTrip(_id: $id, tripName: $tripName, location: $location, startDate: $startDate, endDate: $endDate, lodgingName: $lodgingName, lodgingAddress: $lodgingAddress, lodgingContact: $lodgingContact) {
+    _id
     endDate
-    lodgingName
+    location
     lodgingAddress
     lodgingContact
+    lodgingName
+    startDate
+    tripName
   }
 }
 `;

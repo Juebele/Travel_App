@@ -1,16 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import { useQuery, useMutation } from '@apollo/client';
-import { GET_DATES } from '../../../utils/queries';
+import { QUERY_TRIP } from '../../../utils/queries';
 import { EDIT_TRIP } from '../../../utils/mutations';
+import UpdateTripBtn from '../../UpdateTripBtn';
 
-export default function Dates() {
-    const { loading, data } = useQuery(GET_DATES);
-    const trips = data?.trips || [];
-    // The number in the following array will need to be changed based on which trip the user chooses to see from the home page
-    const trip = trips[0];
+export default function Dates({id}) {
+    const { loading, data } = useQuery(QUERY_TRIP, {
+        variables: {tripid: id}
+    });
+    const trip = data?.trip || [];
+    console.log(trip);
 
-    const [ editTrip, {error} ] = useMutation(EDIT_TRIP);
 
+    //const [ editTrip, {error} ] = useMutation(EDIT_TRIP);
     const calculateDays = (startDate, endDate) => {
         const start = new Date(startDate);
         const end = new Date(endDate);
@@ -22,15 +24,11 @@ export default function Dates() {
     const [startDate, setStartDate] = useState();
 
     const [endDate, setEndDate] = useState();
-    
-    console.log(trip);
 
     return (
         <div>
             {loading ? (
                 <div>Loading...</div>
-            ) : !trips.length ? (
-                <div>Dates haven't been set yet</div>
             ) : (
                 <div className="card mx-auto mb-4" style={{ maxWidth: '400px' }}>
                     <div className="card-body">
@@ -41,18 +39,22 @@ export default function Dates() {
                             <p>{trip.startDate}</p>
                             <input onChange={(event) => setStartDate(event.target.value)} type="text" defaultValue={startDate}></input>
                             {/* <button>Edit</button> */}
-                            <button onClick={() => {
+                            {/* <button onClick={() => {
                                 editTrip({variables: {
                                     startDate: startDate, 
                                     id: window.location.pathname.split('/').pop()
                                 }})
-                            }}>Save</button>
+                            }}>Save</button> */}
+                           
                         </div>
                         <div className="col-6">
                             <p className="fw-bold mb-1">End Date:</p>
                             <p>{trip.endDate}</p>
                             <input onChange={(event) => setEndDate(event.target.value)} type="text" defaultValue={endDate}></input>
                         </div>
+                        </div>
+                        <div>
+                            <UpdateTripBtn userTrip={data} startDate={startDate} endDate={endDate}/>
                         </div>
                         <div className="row">
                         <div className="col">
