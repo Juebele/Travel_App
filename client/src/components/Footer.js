@@ -5,11 +5,11 @@ function Footer() {
     return (
         <div className='footer row' style={{ display: 'block'}}>
             <div className='container-fluid col contributors'>
-                <p className='container-fluid row justify-content-start'>Alisa Bevers</p>
-                <p className='container-fluid row justify-content-start'>Cole Thompson</p>
-                <p className='container-fluid row justify-content-start'>Dowling Briggs</p>
-                <p className='container-fluid row justify-content-start'>Bryant Lee</p>
-                <p className='container-fluid row justify-content-start'>James Uebele</p>
+                <p className='container-fluid row justify-content-start'><a href='https://github.com/alisabevers' target='_blank' className='footer-link'>Alisa Bevers</a></p>
+                <p className='container-fluid row justify-content-start'><a href='https://github.com/cmthom' target='_blank' className='footer-link'>Cole Thompson</a></p>
+                <p className='container-fluid row justify-content-start'><a href='https://github.com/ddbriggs95' target='_blank' className='footer-link'>Dowling Briggs</a></p>
+                <p className='container-fluid row justify-content-start'><a href='https://github.com/blee241' target='_blank' className='footer-link'>Bryant Lee</a></p>
+                <p className='container-fluid row justify-content-start'><a href='https://github.com/juebele' target='_blank' className='footer-link'>James Uebele</a></p>
             </div>
             {/* <div className='container-fluid col links'>
                 <p className='container-fluid row justify-content-center'>Home</p>
