@@ -26,10 +26,6 @@ function Destinations() {
                     <li>Location: {location}</li>
                     <li>Description: {description}</li>
                 </ul>
-                <div className='text-center'>
-                    {/* <button className='btn btn-auto d-inline-block align-content-center'>Change Destination Details</button> */}
-                    <Link to={'/your-trip'}>test</Link>
-                </div>
             </div>
         </div>
     )
