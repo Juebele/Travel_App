@@ -29,7 +29,7 @@ const Home = () => {
                     Trip planning made easy.
                   </h2>
                 </div>
-                <button id="getStartedBtn" className="home-start-btn" style={{ backgroundColor: textColor, border: 'none' }}>
+                <button id="getStartedBtn" className="home-start-btn">
                   <Link id="getStartedLink" className="customLink" to={`/sign-up`} style={{ fontSize: "50px", fontWeight: "bold"}}>
                     Get Started
                   </Link>
@@ -42,20 +42,23 @@ const Home = () => {
         <div>
           <Navbar />
           <h2 className="d-flex justify-content-center my-4 fw-bold">Your Trips</h2>
-          {data ? data.me.trips.map((trip) => {
-            return (
-              <div className="card text-center mb-3 col-3">
-                <div className="card-body">
-                  <h5 className="card-title">{trip.tripName}</h5>
-                  <button className="btn btn-primary">
-                    <Link to={`/trips/${trip._id}`}>
-                      View Trip
-                    </Link>
-                  </button>
+          
+            {data ? data.me.trips.map((trip) => {
+              return (
+                <div className="card text-center mb-3 col-3">
+                  <div className="card-body">
+                    <h5 className="card-title">{trip.tripName}</h5>
+                    <button className="btn" style={{ backgroundColor: 'black', color: 'white'}}>
+                      <Link to={`/trips/${trip._id}`} style={{ textDecoration: 'none', color: 'white' }}>
+                        View Trip
+                      </Link>
+                    </button>
+                  </div>
                 </div>
-              </div>
-            )
+              )
+            
           }) : null }
+            <h2 className="d-flex justify-content-center my-4 fw-bold">Create a new trip</h2>
             <CreateTripForm />
           </div>
       )}
