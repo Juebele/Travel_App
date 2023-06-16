@@ -111,6 +111,7 @@
     margin: 0 .25rem;
     display: inline;
     text-align: center;
+    font-size: .8rem;
 }
 
 #contributorLinks {
@@ -120,7 +121,7 @@
 .footer-link {
     text-decoration: none;
     /* font-weight: bold; */
-    font-size: 1rem;
+    font-size: .8rem;
 }
 
 #logo {
