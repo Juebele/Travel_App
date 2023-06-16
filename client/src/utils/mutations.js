@@ -12,6 +12,17 @@ mutation addUser($username: String!, $password: String!) {
 }
 `;
 
+export const LOGIN_USER = gql`
+mutation Login($username: String!, $password: String!) {
+  login(username: $username, password: $password) {
+    token
+    user {
+      _id
+      username
+    }
+  }
+}`;
+
 export const ADD_TRIP = gql`
 mutation addTrip ($userid: ID, $tripName: String!, $location: String!, $startDate: String!, $endDate: String!, $lodgingName: String!, $lodgingAddress: String!, $lodgingContact: String!) {
   addTrip(userid: $userid, tripName: $tripName, location: $location, startDate: $startDate, endDate: $endDate, lodgingName: $lodgingName, lodgingAddress: $lodgingAddress, lodgingContact: $lodgingContact) {
@@ -41,13 +52,6 @@ mutation editTrip($tripName: String, $id: ID!) {
 }
 `;
 
-export const LOGIN_USER = gql`
-mutation Login($username: String!, $password: String!) {
-  login(username: $username, password: $password) {
-    token
-    user {
-      _id
-      username
-    }
-  }
-}`
+// export const DELETE_TRIP = gql`
+
+// `;

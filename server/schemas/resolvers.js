@@ -55,9 +55,18 @@ const resolvers = {
                 new: true
             });
             return revisedTrip;
+        },
+        deleteTrip: async (parent, args, context) => {
+            if (context.user) {
+                return Trip.findOneAndUpdate(
+                    { _id: context.user._id },
+                    { $pull: { trips: trip } },
+                    { new: true }
+                );
+            }
+            throw new AuthenticationError('You must be logged in to make a change.');
         }
     }
-    
 };
 
 module.exports = resolvers;
