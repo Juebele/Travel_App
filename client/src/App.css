@@ -142,10 +142,17 @@
 }
 
 
-
 /* SIGN-UP and LOGIN FORM STYLING */
+.login-signup-form-container {
+    height: 100vh;
+    margin-top: 10rem;
+}
+
 .login-signup-form {
-    padding-top: 5rem;
+    padding-top: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    
 }
 
 .formHeader {
