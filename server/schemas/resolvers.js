@@ -50,8 +50,16 @@ const resolvers = {
             }, {$addToSet: {trips: trip._id}})
             return trip;
         },
-        editTrip: async (parent, args, context) => {
-            const revisedTrip = await Trip.findOneAndUpdate({ _id: args._id }, args, {
+        editTrip: async (parent, {_id, tripName, location, startDate, endDate, lodgingName, lodgingAddress, lodgingContact }, context) => {
+            const revisedTrip = await Trip.findOneAndUpdate({ _id }, {$set: {
+                tripName,
+                location,
+                startDate,
+                endDate,
+                lodgingName,
+                lodgingAddress,
+                lodgingContact
+            }}, {
                 new: true
             });
             return revisedTrip;
