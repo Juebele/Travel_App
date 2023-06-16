@@ -108,7 +108,19 @@
 }
 
 .footer p {
-    margin: .5em;
+    margin: 0 .25rem;
+    display: inline;
+    text-align: center;
+}
+
+#contributorLinks {
+    text-align: center;
+}
+
+.footer-link {
+    text-decoration: none;
+    /* font-weight: bold; */
+    font-size: 1rem;
 }
 
 #logo {
@@ -168,10 +180,4 @@ li {
 li a{
     color: whitesmoke;
     text-decoration: none;
-}
-
-.footer-link {
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1em;
 }
