@@ -9,7 +9,7 @@ import { QUERY_ME } from '../utils/queries';
 import trashcan from '../../src/Assets/imgs/trashcan.png'
 
 const Home = () => {
-  const textColor = '#950952';
+  const textColor = 'whitesmoke';
 
   const { loading, data } = useQuery(QUERY_ME);
   console.log(data);
@@ -26,11 +26,11 @@ const Home = () => {
           <div id="homepage-bg">
             <div id="another-home-el" className="container-fluid ">
               <div className="homepage-el">
-                <h1 style={{ color: textColor }} className=''>
+                <h1 className='home-text'>
                   Welcome to Bon Voyage!
                 </h1>
                 <div style={{ marginBottom: '50px' }}>
-                  <h2 style={{ color: textColor, fontSize: '50px', fontWeight: 'bold', }} className=''>
+                  <h2 className='home-text'>
                     Trip planning made easy.
                   </h2>
                 </div>

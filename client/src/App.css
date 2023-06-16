@@ -36,9 +36,15 @@
 
 .homepage-el h1 {
     font-size: 4.5rem;
-    color: white;
     font-weight: 700;
     padding-bottom: 2rem;
+}
+
+.home-text {
+    font-size: 50px;
+    font-weight: bold;
+    color: var(--color2);
+    text-shadow: 5px 5px 5px black;
 }
 
 #getStartedBtn {
@@ -49,6 +55,7 @@
     color: var(--color1);
     font-size: large;
 }
+
 
 /* not sure if this is applying to any button? It is not affecting the Home.js component */
 .buttons {
