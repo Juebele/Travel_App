@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 function Footer() {
     return (
-        <div className='footer row'>
+        <div className='footer row' style={{ display: 'block'}}>
             <div className='container-fluid col contributors'>
                 <p className='container-fluid row justify-content-start'>Alisa Bevers</p>
                 <p className='container-fluid row justify-content-start'>Cole Thompson</p>

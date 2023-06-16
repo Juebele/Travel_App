@@ -35,12 +35,12 @@ function Navbar() {
                     <div className="navbar-nav d-flex">
                         <ul className="navbar-nav">
                             <li className="nav-item nav-link">
-                                <Link className="customLink" to={`/login`}>
+                                <Link className="btn btn-light" to={`/login`}>
                                     Log In
                                 </Link>
                             </li>
                             <li className="nav-item nav-link">
-                                <Link className="customLink" to={`/sign-up`}>
+                                <Link className="btn btn-light" to={`/sign-up`}>
                                     Sign Up
                                 </Link>
                             </li>

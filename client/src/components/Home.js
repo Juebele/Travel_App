@@ -6,12 +6,17 @@ import Auth from '../utils/auth';
 import CreateTripForm from './LoggedIn/YourTripDetails/CreateTripForm';
 import { useQuery } from '@apollo/client';
 import { QUERY_ME } from '../utils/queries';
+import trashcan from '../../src/Assets/imgs/trashcan.png'
 
 const Home = () => {
-  const textColor= '#950952';
+  const textColor = 'whitesmoke';
 
   const { loading, data } = useQuery(QUERY_ME);
   console.log(data);
+
+  function deleteTrip() {
+    window.confirm("Are you sure that you want to delete this trip?")
+  };
 
   return (
     <div>
@@ -21,16 +26,16 @@ const Home = () => {
           <div id="homepage-bg">
             <div id="another-home-el" className="container-fluid ">
               <div className="homepage-el">
-                <h1 style={{color: textColor}} className=''>
-                  Welcome to Bon Voyage! 
+                <h1 className='home-text'>
+                  Welcome to Bon Voyage!
                 </h1>
-                <div style={{marginBottom: '50px'}}>
-                  <h2 style={{color: textColor, fontSize: '50px', fontWeight: 'bold', }} className=''>
+                <div style={{ marginBottom: '50px' }}>
+                  <h2 className='home-text'>
                     Trip planning made easy.
                   </h2>
                 </div>
                 <button id="getStartedBtn" className="home-start-btn">
-                  <Link id="getStartedLink" className="customLink" to={`/sign-up`} style={{ fontSize: "50px", fontWeight: "bold"}}>
+                  <Link id="getStartedLink" className="customLink" to={`/sign-up`} style={{ fontSize: "50px", fontWeight: "bold" }}>
                     Get Started
                   </Link>
                 </button>
@@ -53,10 +58,14 @@ const Home = () => {
                         View Trip
                       </Link>
                     </button>
+                    <br/>
+                    <button onClick={deleteTrip} className='mt-2 justify-content-end' style={{ border: 'none', background: 'white' }}>
+                      <img src={trashcan} style={{ height: '20px', width: '20px', }}/>
+                    </button>  
                   </div>
                 </div>
-              ) 
-            }): null }
+              )
+            }) : null}
           </div>
           <h2 className="d-flex justify-content-center my-4 fw-bold">Create a new trip</h2>
           <CreateTripForm />
