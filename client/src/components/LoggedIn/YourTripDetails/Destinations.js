@@ -30,39 +30,18 @@ export default function Destinations({id}) {
                     <div className='card-body'>
                         <h5 className='card-title text-center'>Location</h5>
                         <div  className='row'>
-                            <div className='col-6'>
-                                <p className='fw-bold mb-1'>Location:</p>
-                                <p>{trip.location}</p>
+                            <div className='col'>
+                                <p className='text-center'>{trip.location}</p>
                                 <input onChange={(event) => setLocation(event.target.value)} type='text' defaultValue={location}></input>
                             </div>
-                            <div className='col-6'>
-                                <p className='fw-bold mb-1'>Description:</p>
-                                <p>{trip.description}</p>
-                                <input onChange={(event) => setDescription(event.target.value)} type='text' defaultValue={description}></input>
-                            </div>
                         </div>
-                        <div>
-                            <UpdateTripBtn userTrip={data} location={location} description={description}/>
+                        <div className='text-center'>
+                            <UpdateTripBtn userTrip={data} location={location}/>
                         </div>
                     </div>
                 </div>
             )}
         </div>
-        // <div className='container-fluid row'>
-        //     <div className='container-fluid col-sm-4' id='aspen-image'>
-        //         <div className='container-fluid col-sm' id='image-row'>
-        //             <img src={image} style={{ maxWidth: '100%' }} />
-        //         </div>
-        //     </div>
-        //     <div className='container-fluid col-7' id='destinations-info'>
-        //         <ul>
-        //             <li>Location: {location}</li>
-        //             <li>Description: {description}</li>
-        //         </ul>
-        //     </div>
-        // </div>
     )
 }
 
-
-// export default Destinations;
