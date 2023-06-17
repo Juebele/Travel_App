@@ -45,7 +45,7 @@ function SignUp() {
         <div>
             <Navbar />
             <div className="login-signup-form-container">
-                <form className="card login-signup-form row mx-auto col-10 col-md-8 col-lg-6 shadow" onSubmit={handleFormSubmit}>
+                <form className="card login-signup-form mx-auto col-10 col-md-8 col-lg-6 shadow" onSubmit={handleFormSubmit}>
                     <h1 className="formHeader">
                         Sign up for your next adventure!
                     </h1>
