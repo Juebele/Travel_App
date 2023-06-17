@@ -59,7 +59,7 @@ export default function Dates({id}) {
                         <div className="row">
                         <div className="col">
                             <p className="fw-bold mb-1">Number of Days:</p>
-                            <p>{calculateDays(startDate, trip.endDate)}</p>
+                            <p>{calculateDays(trip.startDate, trip.endDate)}</p>
                         </div>
                         </div>
                     </div>
