@@ -45,7 +45,7 @@ export default function YourTripDetails({ trips }) {
         {trip.tripName}
       </h2>
       <div className="d-flex justify-content-center mt-3 mb-4">
-        <button className="btn btn-primary">Invite +</button>
+        <button className="btn btn-primary shadow">Invite +</button>
       </div>
       <hr className="dashboardHR" />
       <div className="d-flex justify-content-center mb-4">
