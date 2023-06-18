@@ -29,39 +29,48 @@ export default function Lodging({ id }) {
 
   return (
     <div>
-      <div className="card mx-auto mb-4" style={{ maxWidth: "800px" }}>
+      <div className="card mx-auto mb-4 shadow border-primary" style={{ maxWidth: "800px" }}>
         <div className="card-body">
           <h5 className="card-title text-center fw-bold">Lodging</h5>
           <div className="row">
-            <div className="col-6">
-              <p className="fw-bold mb-1">Lodging Name:</p>
-              <p>{trip.lodgingName}</p>
-              <input
-                onChange={(event) => setLodgingName(event.target.value)}
-                type="text"
-                defaultValue={lodgingName}
-              ></input>
+            <div className="col-4">
+              <p className="fw-bold mb-1 d-flex justify-content-center">Lodging Name:</p>
+              <p className="mb-2 d-flex justify-content-center">{trip.lodgingName}</p>
+              <div className="d-flex justify-content-center">
+                <input
+                  onChange={(event) => setLodgingName(event.target.value)}
+                  type="text"
+                  defaultValue={lodgingName}
+                  className="lodgingInput"
+                ></input>
+              </div>
             </div>
-            <div className="col-6">
-              <p className="fw-bold mb-1">Lodging Address:</p>
-              <p>{trip.lodgingAddress}</p>
-              <input
-                onChange={(event) => setLodgingAddress(event.target.value)}
-                type="text"
-                defaultValue={lodgingAddress}
-              ></input>
+            <div className="col-4">
+              <p className="fw-bold mb-1 d-flex justify-content-center">Lodging Address:</p>
+              <p className="mb-2 d-flex justify-content-center">{trip.lodgingAddress}</p>
+              <div className="d-flex justify-content-center">
+                <input
+                  onChange={(event) => setLodgingAddress(event.target.value)}
+                  type="text"
+                  defaultValue={lodgingAddress}
+                  className="lodgingInput"
+                ></input>
+              </div>
             </div>
-            <div className="col-6">
-              <p className="fw-bold mb-1">Lodging Contact:</p>
-              <p>{trip.lodgingContact}</p>
-              <input
-                onChange={(event) => setLodgingContact(event.target.value)}
-                type="text"
-                defaultValue={lodgingContact}
-              ></input>
+            <div className="col-4">
+              <p className="fw-bold mb-1 d-flex justify-content-center">Lodging Contact:</p>
+              <p className="mb-2 d-flex justify-content-center">{trip.lodgingContact}</p>
+              <div className="d-flex justify-content-center">
+                <input
+                  onChange={(event) => setLodgingContact(event.target.value)}
+                  type="text"
+                  defaultValue={lodgingContact}
+                  className="lodgingInput"
+                ></input>
+              </div>
             </div>
           </div>
-          <div>
+          <div className="mt-3 d-flex justify-content-center">
             <UpdateTripBtn
               userTrip={data}
               lodgingName={lodgingName}
@@ -70,38 +79,40 @@ export default function Lodging({ id }) {
             />
           </div>
           <div id="external-sites">
-            <ul id="hotel-sites">
-              <button className="btn btn-primary">
-                <li>
-                  <a href="https://www.expedia.com/Hotels" target="_blank">
-                    find hotels at Expedia
+            <hr/>
+            <h5 className="d-flex justify-content-center fw-bold mb-3">External Sites</h5>
+            <div className="row">
+              <div className="col-6 d-flex justify-content-center my-1">
+                <button className="btn btn-primary shadow">
+                  <a className="externalLink" href="https://www.expedia.com/Hotels" target="_blank">
+                    Find hotels at Expedia
                   </a>
-                </li>
-              </button>
-              <button className="btn btn-primary">
-                <li>
-                  <a href="https://www.travelocity.com/" target="_blank">
-                    find hotels at Travelocity
+                </button>
+              </div>
+              <div className="col-6 d-flex justify-content-center my-1">
+                <button className="btn btn-primary shadow">
+                  <a className="externalLink" href="https://www.travelocity.com/" target="_blank">
+                    Find hotels at Travelocity
                   </a>
-                </li>
-              </button>
-            </ul>
-            <ul>
-              <button className="btn btn-primary">
-                <li>
-                  <a href="https://www.airbnb.com/" target="_blank">
-                    find stays at AirBNB
+                </button>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-6 d-flex justify-content-center my-1">
+                <button className="btn btn-primary shadow">
+                  <a className="externalLink" href="https://www.airbnb.com/" target="_blank">
+                    Find stays at AirBNB
                   </a>
-                </li>
-              </button>
-              <button className="btn btn-primary">
-                <li>
-                  <a href="https://www.vrbo.com/" target="_blank">
-                    find stays at Vrbo
+                </button>
+              </div>
+              <div className="col-6 d-flex justify-content-center my-1">
+                <button className="btn btn-primary shadow">
+                  <a className="externalLink" href="https://www.vrbo.com/" target="_blank">
+                    Find stays at Vrbo
                   </a>
-                </li>
-              </button>
-            </ul>
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>

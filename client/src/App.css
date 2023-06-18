@@ -55,11 +55,21 @@
     font-size: large;
 }
 
+/* CSS for external links */
+.externalLink {
+    text-decoration: none;
+    color: white;
+}
 
 /* CSS for the HR element in YourTripDashboard */
 .dashboardHR {
     color: #212429;
     opacity: 1;
+}
+
+/* CSS for the input elements in the Lodging tab */
+.lodgingInput {
+    max-width: 160px;
 }
 
 /* CSS for the home button */
