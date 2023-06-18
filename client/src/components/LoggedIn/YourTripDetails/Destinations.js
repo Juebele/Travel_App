@@ -32,7 +32,7 @@ export default function Destinations({id}) {
             ) : (
                 <div className="card mx-auto mb-4 border-primary shadow" style={{ maxWidth: '400px' }}>
                     <div className='card-body'>
-                        <h5 className='card-title text-center'>Location</h5>
+                        <h5 className='card-title text-center fw-bold'>Location</h5>
                         <div  className='row'>
                             <div className='col'>
                                 <p className='text-center mb-2'>{trip.location}</p>

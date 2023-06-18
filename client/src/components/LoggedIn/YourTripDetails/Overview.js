@@ -23,7 +23,7 @@ export default function Overview({id}) {
                     <div className='card-body'>
 
                         <div className='card mb-3 shadow border-secondary'>
-                            <h5 className='card-title text-center mt-3'>Dates</h5>
+                            <h5 className='card-title text-center mt-3 fw-bold'>Dates</h5>
                             <div  className='row'>
                                 <div className='col'>
                                     <p className='text-center'>{trip.startDate} - {trip.endDate}</p>
@@ -32,7 +32,7 @@ export default function Overview({id}) {
                         </div>
 
                         <div className='card mb-3 shadow border-secondary'>
-                            <h5 className='card-title text-center mt-3'>Location</h5>
+                            <h5 className='card-title text-center mt-3 fw-bold'>Location</h5>
                             <div  className='row'>
                                 <div className='col'>
                                     <p className='text-center'>{trip.location}</p>
@@ -41,7 +41,7 @@ export default function Overview({id}) {
                         </div>
 
                         <div className='card shadow border-secondary'>
-                            <h5 className='card-title text-center mt-3'>Lodging</h5>
+                            <h5 className='card-title text-center mt-3 fw-bold'>Lodging</h5>
                             <div  className='row'>
                                 <div className='col'>
                                     <p className='text-center mb-0'>{trip.lodgingName} at {trip.lodgingAddress}</p>

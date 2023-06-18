@@ -31,7 +31,7 @@ export default function Lodging({ id }) {
     <div>
       <div className="card mx-auto mb-4" style={{ maxWidth: "800px" }}>
         <div className="card-body">
-          <h5 className="card-title text-center">Lodging</h5>
+          <h5 className="card-title text-center fw-bold">Lodging</h5>
           <div className="row">
             <div className="col-6">
               <p className="fw-bold mb-1">Lodging Name:</p>
