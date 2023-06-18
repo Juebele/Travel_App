@@ -17,12 +17,35 @@ export default function Overview({id}) {
             ) : (
                 <div className="card mx-auto mb-4" style={{ maxWidth: '400px' }}>
                     <div className='card-body'>
-                        <h5 className='card-title text-center'>Location</h5>
-                        <div  className='row'>
-                            <div className='col'>
-                                <p className='text-center'>{trip.location}</p>
+
+                        <div className='card'>
+                            <h5 className='card-title text-center mt-3'>Dates</h5>
+                            <div  className='row'>
+                                <div className='col'>
+                                    <p className='text-center'>{trip.startDate} - {trip.endDate}</p>
+                                </div>
                             </div>
                         </div>
+
+                        <div className='card'>
+                            <h5 className='card-title text-center mt-3'>Location</h5>
+                            <div  className='row'>
+                                <div className='col'>
+                                    <p className='text-center'>{trip.location}</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className='card'>
+                            <h5 className='card-title text-center mt-3'>Lodging</h5>
+                            <div  className='row'>
+                                <div className='col'>
+                                    <p className='text-center mb-0'>{trip.lodgingName} at {trip.lodgingAddress}</p>
+                                    <p className='text-center'>{trip.lodgingContact}</p>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             )}
