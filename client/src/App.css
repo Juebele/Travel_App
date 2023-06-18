@@ -56,9 +56,10 @@
 }
 
 
-/* not sure if this is applying to any button? It is not affecting the Home.js component */
-.buttons {
-    background-color: #FF8551;
+/* CSS for the HR element in YourTripDashboard */
+.dashboardHR {
+    color: #212429;
+    opacity: 1;
 }
 
 /* CSS for the home button */
