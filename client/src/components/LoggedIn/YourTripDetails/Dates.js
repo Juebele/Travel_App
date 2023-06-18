@@ -36,7 +36,7 @@ export default function Dates({id}) {
             ) : (
                 <div className="card border-primary shadow mx-auto mb-4" style={{ maxWidth: '400px' }}>
                     <div className="card-body">
-                        <h5 className="card-title text-center">Trip Duration</h5>
+                        <h5 className="card-title text-center fw-bold">Trip Duration</h5>
                         <div className="row">
                         <div className="col-6">
                             <p className="fw-bold mb-1 d-flex justify-content-center">Start Date:</p>
