@@ -14,7 +14,7 @@ const UpdateTripBtn = ({userTrip, startDate, endDate, location, lodgingName, lod
             const {data} = await editTrip({
                 variables: {id: trip._id, ...trip, tripName, startDate, endDate, location, lodgingName, lodgingAddress, lodgingContact }
             })
-            window.location.reload();
+            // window.location.reload();
         } catch (err) {
             console.log(err);
         }
