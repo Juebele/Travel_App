@@ -9,7 +9,7 @@ function Footer() {
             <div id="contributorLinks" className='container-fluid col contributors'>
                 <p><a href='https://github.com/alisabevers' target='_blank' className='footer-link'>Alisa Bevers</a></p>
                 <p> | </p>
-                <p><a href='https://github.com/cmthom' target='_blank' className='footer-link'>Cole Thompson</a></p>
+                <p><a href='https://github.com/cm-thom' target='_blank' className='footer-link'>Cole Thompson</a></p>
                 <p> | </p>
                 <p><a href='https://github.com/ddbriggs95' target='_blank' className='footer-link'>Dowling Briggs</a></p>
                 <p> | </p>
