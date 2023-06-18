@@ -34,14 +34,20 @@ export default function Dates({id}) {
                     </div>      
                 </div>
             ) : (
-                <div className="card mx-auto mb-4" style={{ maxWidth: '400px' }}>
+                <div className="card border-primary shadow mx-auto mb-4" style={{ maxWidth: '400px' }}>
                     <div className="card-body">
                         <h5 className="card-title text-center">Trip Duration</h5>
                         <div className="row">
                         <div className="col-6">
-                            <p className="fw-bold mb-1">Start Date:</p>
-                            <p>{trip.startDate}</p>
-                            <input onChange={(event) => setStartDate(event.target.value)} type="text" defaultValue={startDate}></input>
+                            <p className="fw-bold mb-1 d-flex justify-content-center">Start Date:</p>
+                            <p className='mb-1 d-flex justify-content-center'>{trip.startDate}</p>
+                            <input 
+                                className='d-flex justify-content-center text-center' 
+                                onChange={(event) => setStartDate(event.target.value)} 
+                                type="text" 
+                                defaultValue={startDate} 
+                                style={{ maxWidth: '170px' }}
+                            />
                             {/* <button>Edit</button> */}
                             {/* <button onClick={() => {
                                 editTrip({variables: {
@@ -51,20 +57,26 @@ export default function Dates({id}) {
                             }}>Save</button> */}
                            
                         </div>
-                        <div className="col-6">
-                            <p className="fw-bold mb-1">End Date:</p>
-                            <p>{trip.endDate}</p>
-                            <input onChange={(event) => setEndDate(event.target.value)} type="text" defaultValue={endDate}></input>
+                            <div className="col-6">
+                                <p className="fw-bold mb-1 d-flex justify-content-center">End Date:</p>
+                                <p className='mb-1 d-flex justify-content-center'>{trip.endDate}</p>
+                                <input 
+                                    className='text-center' 
+                                    onChange={(event) => setEndDate(event.target.value)} 
+                                    type="text" 
+                                    defaultValue={endDate} 
+                                    style={{ maxWidth: '170px' }}
+                                />
+                            </div>
                         </div>
-                        </div>
-                        <div>
+                        <div className='d-flex justify-content-center mt-3'>
                             <UpdateTripBtn userTrip={data} startDate={startDate} endDate={endDate}/>
                         </div>
                         <div className="row">
-                        <div className="col">
-                            <p className="fw-bold mb-1">Number of Days:</p>
-                            <p>{calculateDays(trip.startDate, trip.endDate)}</p>
-                        </div>
+                            <div className="col">
+                                <p className="fw-bold mb-1 d-flex justify-content-center">Number of Days:</p>
+                                <p className='d-flex justify-content-center'>{calculateDays(trip.startDate, trip.endDate)}</p>
+                            </div>
                         </div>
                     </div>
                 </div>

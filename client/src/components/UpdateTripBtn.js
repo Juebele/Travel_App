@@ -21,7 +21,7 @@ const UpdateTripBtn = ({userTrip, startDate, endDate, location, lodgingName, lod
     }
     return (
         <p>
-            <button onClick={updateTripHandler}>
+            <button className='btn btn-primary shadow' onClick={updateTripHandler}>
                 Update
             </button>
         </p>
