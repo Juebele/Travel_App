@@ -143,16 +143,20 @@
 
 
 /* SIGN-UP and LOGIN FORM STYLING */
+
 .login-signup-form-container {
+    background-image: url('./Assets/imgs/login-form-bg.jpeg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
     height: 100vh;
-    margin-top: 10rem;
+    padding-top: 10rem;
 }
 
 .login-signup-form {
     padding-top: 2rem;
     padding-left: 2rem;
     padding-right: 2rem;
-    
 }
 
 .formHeader {
