@@ -16,7 +16,7 @@ export default function YourTripDashboard(props) {
     });
 
     const user = data?.me || data?.user || [];
-    //console.log("this is the user:", user);
+    console.log("this is the user:", user);
 
     const userTrips = user.trips;
     //console.log("my trips:" , userTrips)
