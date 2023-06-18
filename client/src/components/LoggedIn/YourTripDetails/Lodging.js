@@ -78,7 +78,7 @@ export default function Lodging({ id }) {
               lodgingContact={lodgingContact}
             />
           </div>
-          <div id="external-sites">
+          <div id="external-sites" className="mb-3">
             <hr/>
             <h5 className="d-flex justify-content-center fw-bold mb-3">External Sites</h5>
             <div className="row">
