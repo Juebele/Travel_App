@@ -28,7 +28,11 @@ export default function Dates({id}) {
     return (
         <div>
             {loading ? (
-                <div>Loading...</div>
+                <div className="card mx-auto mb-4 border-primary shadow" style={{ maxWidth: '400px' }}>
+                    <div className='card-body'>
+                        <div className='d-flex justify-content-center'>Loading...</div>
+                    </div>      
+                </div>
             ) : (
                 <div className="card mx-auto mb-4" style={{ maxWidth: '400px' }}>
                     <div className="card-body">

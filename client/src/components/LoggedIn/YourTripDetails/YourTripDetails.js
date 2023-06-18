@@ -46,19 +46,19 @@ export default function YourTripDetails({trips})  {
             </button>
         </div>
         <div className="d-flex justify-content-center mb-4">
-            <button onClick={() => handleTabClick(0)} className={`btn ${activeTab === 0 ? 'btn-primary' : 'btn-dark'} fw-bold fs-5 mt-2 mx-1`}>
+            <button onClick={() => handleTabClick(0)} className={`btn ${activeTab === 0 ? 'btn-primary' : 'btn-dark'} fw-bold fs-5 mt-2 mx-1 shadow`}>
                 Overview
             </button>
-            <button onClick={() => handleTabClick(1)} className={`btn ${activeTab === 1 ? 'btn-primary' : 'btn-dark'} fw-bold fs-5 mt-2 mx-1`}>
+            <button onClick={() => handleTabClick(1)} className={`btn ${activeTab === 1 ? 'btn-primary' : 'btn-dark'} fw-bold fs-5 mt-2 mx-1 shadow`}>
                 Dates
             </button>
-            <button onClick={() => handleTabClick(2)} className={`btn ${activeTab === 2 ? 'btn-primary' : 'btn-dark'} fw-bold fs-5 mt-2 mx-1`}>
+            <button onClick={() => handleTabClick(2)} className={`btn ${activeTab === 2 ? 'btn-primary' : 'btn-dark'} fw-bold fs-5 mt-2 mx-1 shadow`}>
                 Destinations
             </button>
-            <button onClick={() => handleTabClick(3)} className={`btn ${activeTab === 3 ? 'btn-primary' : 'btn-dark'} fw-bold fs-5 mt-2 mx-1`}>
+            <button onClick={() => handleTabClick(3)} className={`btn ${activeTab === 3 ? 'btn-primary' : 'btn-dark'} fw-bold fs-5 mt-2 mx-1 shadow`}>
                 Lodging
             </button>
-            <button onClick={() => handleTabClick(4)} className={`btn ${activeTab === 4 ? 'btn-primary' : 'btn-dark'} fw-bold fs-5 mt-2 mx-1`}>
+            <button onClick={() => handleTabClick(4)} className={`btn ${activeTab === 4 ? 'btn-primary' : 'btn-dark'} fw-bold fs-5 mt-2 mx-1 shadow`}>
                 Itinerary
             </button>
         </div>
