@@ -24,16 +24,28 @@ export default function Destinations({id}) {
     return (
         <div>
             {loading ? (
-                <div>Loading...</div>
+                <div className="card mx-auto mb-4 border-primary shadow" style={{ maxWidth: '400px' }}>
+                    <div className='card-body'>
+                        <div className='d-flex justify-content-center'>Loading...</div>
+                    </div>      
+                </div>
             ) : (
-                <div className="card mx-auto mb-4" style={{ maxWidth: '400px' }}>
+                <div className="card mx-auto mb-4 border-primary shadow" style={{ maxWidth: '400px' }}>
                     <div className='card-body'>
                         <h5 className='card-title text-center'>Location</h5>
                         <div  className='row'>
                             <div className='col'>
-                                <p className='text-center'>{trip.location}</p>
-                                <input onChange={(event) => setLocation(event.target.value)} type='text' defaultValue={location}></input>
+                                <p className='text-center mb-2'>{trip.location}</p>
                             </div>
+                        </div>
+                        <div className='row justify-content-center'>
+                            <input
+                                onChange={(event) => setLocation(event.target.value)} 
+                                type='text' 
+                                defaultValue={location}
+                                className='mb-3 text-center'
+                                style={{ maxWidth: '170px' }}
+                            />
                         </div>
                         <div className='text-center'>
                             <UpdateTripBtn userTrip={data} location={location}/>

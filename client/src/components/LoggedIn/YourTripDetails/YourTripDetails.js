@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Overview from './Overview';
 import CreateTripForm from './CreateTripForm';
 import Dates from './Dates';
 import Lodging from './Lodging';
@@ -39,30 +40,32 @@ export default function YourTripDetails({trips})  {
         <div className="d-flex justify-content-center">
             Trip planner: Insert username here
         </div>
-        <div className="d-flex justify-content-center my-3">
+        <div className="d-flex justify-content-center mt-3 mb-4">
             <button className="btn btn-primary">
                 Invite +
             </button>
         </div>
+        <hr className='dashboardHR'/>
         <div className="d-flex justify-content-center mb-4">
-            <button onClick={() => handleTabClick(0)} className={`btn ${activeTab === 0 ? 'btn-primary' : 'btn-dark'} fw-bold fs-5 mt-2 mx-1`}>
+            <button onClick={() => handleTabClick(0)} className={`btn ${activeTab === 0 ? 'btn-primary' : 'btn-dark'} fw-bold fs-5 mt-2 mx-1 shadow`}>
                 Overview
             </button>
-            <button onClick={() => handleTabClick(1)} className={`btn ${activeTab === 1 ? 'btn-primary' : 'btn-dark'} fw-bold fs-5 mt-2 mx-1`}>
+            <button onClick={() => handleTabClick(1)} className={`btn ${activeTab === 1 ? 'btn-primary' : 'btn-dark'} fw-bold fs-5 mt-2 mx-1 shadow`}>
                 Dates
             </button>
-            <button onClick={() => handleTabClick(2)} className={`btn ${activeTab === 2 ? 'btn-primary' : 'btn-dark'} fw-bold fs-5 mt-2 mx-1`}>
+            <button onClick={() => handleTabClick(2)} className={`btn ${activeTab === 2 ? 'btn-primary' : 'btn-dark'} fw-bold fs-5 mt-2 mx-1 shadow`}>
                 Destinations
             </button>
-            <button onClick={() => handleTabClick(3)} className={`btn ${activeTab === 3 ? 'btn-primary' : 'btn-dark'} fw-bold fs-5 mt-2 mx-1`}>
+            <button onClick={() => handleTabClick(3)} className={`btn ${activeTab === 3 ? 'btn-primary' : 'btn-dark'} fw-bold fs-5 mt-2 mx-1 shadow`}>
                 Lodging
             </button>
-            <button onClick={() => handleTabClick(4)} className={`btn ${activeTab === 4 ? 'btn-primary' : 'btn-dark'} fw-bold fs-5 mt-2 mx-1`}>
+            <button onClick={() => handleTabClick(4)} className={`btn ${activeTab === 4 ? 'btn-primary' : 'btn-dark'} fw-bold fs-5 mt-2 mx-1 shadow`}>
                 Itinerary
             </button>
         </div>
+        <hr className='dashboardHR'/>
         <div>
-            {activeTab === 0 && <div>Insert the Overview here</div>}
+            {activeTab === 0 && <Overview id={tripid}/>}
             {activeTab === 1 && <Dates id={tripid} />}
             {activeTab === 2 && <Destinations id={tripid} />}
             {activeTab === 3 && <Lodging id={tripid} />}
