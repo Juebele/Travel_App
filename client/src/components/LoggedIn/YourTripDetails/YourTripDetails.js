@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Overview from './Overview';
 import CreateTripForm from './CreateTripForm';
 import Dates from './Dates';
 import Lodging from './Lodging';
@@ -62,7 +63,7 @@ export default function YourTripDetails({trips})  {
             </button>
         </div>
         <div>
-            {activeTab === 0 && <div>Insert the Overview here</div>}
+            {activeTab === 0 && <Overview id={tripid}/>}
             {activeTab === 1 && <Dates id={tripid} />}
             {activeTab === 2 && <Destinations id={tripid} />}
             {activeTab === 3 && <Lodging id={tripid} />}
