@@ -15,10 +15,10 @@ export default function Overview({id}) {
             { loading ? (
                 <div className='d-flex justify-content-center mb-3'>Loading...</div>
             ) : (
-                <div className="card mx-auto mb-4" style={{ maxWidth: '400px' }}>
+                <div className="card mx-auto mb-4 border-primary shadow" style={{ maxWidth: '400px' }}>
                     <div className='card-body'>
 
-                        <div className='card'>
+                        <div className='card mb-3 shadow border-secondary'>
                             <h5 className='card-title text-center mt-3'>Dates</h5>
                             <div  className='row'>
                                 <div className='col'>
@@ -27,7 +27,7 @@ export default function Overview({id}) {
                             </div>
                         </div>
 
-                        <div className='card'>
+                        <div className='card mb-3 shadow border-secondary'>
                             <h5 className='card-title text-center mt-3'>Location</h5>
                             <div  className='row'>
                                 <div className='col'>
@@ -36,7 +36,7 @@ export default function Overview({id}) {
                             </div>
                         </div>
 
-                        <div className='card'>
+                        <div className='card shadow border-secondary'>
                             <h5 className='card-title text-center mt-3'>Lodging</h5>
                             <div  className='row'>
                                 <div className='col'>
