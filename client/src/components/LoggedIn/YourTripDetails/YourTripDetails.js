@@ -4,6 +4,7 @@ import CreateTripForm from "./CreateTripForm";
 import Dates from "./Dates";
 import Lodging from "./Lodging";
 import Destinations from "./Destinations";
+import Itinerary from './Itinerary';
 import { useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 import { QUERY_TRIP } from "../../../utils/queries";
@@ -96,7 +97,7 @@ export default function YourTripDetails({ trips }) {
         {activeTab === 1 && <Dates id={tripid} />}
         {activeTab === 2 && <Destinations id={tripid} />}
         {activeTab === 3 && <Lodging id={tripid} />}
-        {activeTab === 4 && <div>Insert Itinerary here</div>}
+        {activeTab === 4 && <Itinerary id={tripid} />}
       </div>
     </div>
   );
