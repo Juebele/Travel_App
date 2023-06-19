@@ -116,6 +116,7 @@
 /* FOOTER STYLING */
 .footer {
     background-color: var(--color1);
+    padding: .5rem;
 }
 
 .footer p {
@@ -185,6 +186,11 @@
 
 #submit-login-signup {
     margin-top: 1vb;
+}
+
+/* yourTripDetails component */
+#yourTripDetails-page {
+    height: 100vh;
 }
 
 #image-row {

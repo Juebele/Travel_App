@@ -35,7 +35,7 @@ export default function YourTripDetails({ trips }) {
   //   }, [activeTab])
 
   return (
-    <div>
+    <div id="yourTripDetails-page">
       {/* <div className='container' onClick={trackCurrentTripId}>
         {trips.map((trip) => (
            <button key={trip._id} id={trip._id}>{trip._id}</button>  
