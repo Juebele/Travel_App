@@ -72,6 +72,7 @@ export default function Dates({id}) {
                         <div className='d-flex justify-content-center mt-3'>
                             <UpdateTripBtn userTrip={data} startDate={startDate} endDate={endDate}/>
                         </div>
+                        <hr></hr>
                         <div className="row">
                             <div className="col">
                                 <p className="fw-bold mb-1 d-flex justify-content-center">Number of Days:</p>

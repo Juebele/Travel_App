@@ -222,4 +222,17 @@ li {
 li a{
     color: whitesmoke;
     text-decoration: none;
+
+
 }
+
+
+/* itinerary */
+
+.itinerary-cards {
+    padding: 1rem;
+
+}
+
+.add-activity-btn {
+    max-width: 150px;
