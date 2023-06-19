@@ -116,6 +116,7 @@
 /* FOOTER STYLING */
 .footer {
     background-color: var(--color1);
+    padding: .5rem;
 }
 
 .footer p {
@@ -187,6 +188,11 @@
     margin-top: 1vb;
 }
 
+/* yourTripDetails component */
+#yourTripDetails-page {
+    height: 100vh;
+}
+
 #image-row {
     padding: 1em;
 }
@@ -216,6 +222,8 @@ li {
 li a{
     color: whitesmoke;
     text-decoration: none;
+
+
 }
 
 
@@ -228,4 +236,3 @@ li a{
 
 .add-activity-btn {
     max-width: 150px;
-}
